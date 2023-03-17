@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\RegisterPatientController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
+        Route::get('/register-patient', [RegisterPatientController::class, 'index'])->name('admin.register.patient');
+        Route::get('/register-patient/create', [RegisterPatientController::class, 'create'])->name('admin.register.patient.create');
+    });
+});
+
+Auth::routes();
+

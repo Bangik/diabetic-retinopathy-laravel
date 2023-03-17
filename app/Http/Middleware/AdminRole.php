@@ -16,9 +16,7 @@ class AdminRole
     public function handle(Request $request, Closure $next): Response
     {
         if (auth()->user()->role !== 'admin') {
-            return response()->json([
-                'message' => 'Unauthorized',
-            ], 401);
+            return abort(403, 'Unauthorized');
         }
 
         return $next($request);

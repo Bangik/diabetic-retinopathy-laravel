@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\ExaminationController as AdminExaminationController;
-use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Api\Admin\ExaminationController as AdminExaminationController;
+use App\Http\Controllers\Api\Admin\UserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
