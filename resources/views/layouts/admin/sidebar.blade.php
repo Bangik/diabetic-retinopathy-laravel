@@ -15,13 +15,13 @@
         </a>
       </li>
 
+      @if (Auth::user()->role == 'admin')
       <li class="sidebar-item {{request()->is('admin/register-patient/create') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('admin.register-patient.create')}}">
           <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Register Patient</span>
         </a>
       </li>
 
-      
       <li class="sidebar-item {{request()->is('admin/examination/create') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('admin.examination.create')}}">
           <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Register Examination</span>
@@ -33,7 +33,17 @@
           <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
         </a>
       </li>
+      @endif
+      
+      @if (Auth::user()->role == 'doctor')
+      <li class="sidebar-item {{request()->is('doctor/examination') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('doctor.examination.index')}}">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
+        </a>
+      </li>
+      @endif
 
+      @if (Auth::user()->role == 'admin')
       <li class="sidebar-header">
         Management User
       </li>
@@ -55,6 +65,7 @@
           <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Register Doctor</span>
         </a>
       </li>
+      @endif
 
       <li class="sidebar-header">
         Profile

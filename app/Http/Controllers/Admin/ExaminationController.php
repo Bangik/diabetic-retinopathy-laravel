@@ -36,7 +36,7 @@ class ExaminationController extends Controller
         $last_queue_number++;
 
         $request->merge([
-            'status' => 'queue',
+            'status' => 'waiting',
             'queue_number' => 'Q' . $last_queue_number,
         ]);
 
