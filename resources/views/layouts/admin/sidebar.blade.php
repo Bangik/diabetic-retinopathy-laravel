@@ -72,13 +72,13 @@
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="#">
+        <a class="sidebar-link" href="{{route('profile.index')}}">
           <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Profile</span>
         </a>
       </li>
 
       <li class="sidebar-item">
-        <a class="sidebar-link" href="#">
+        <a class="sidebar-link" href="{{route('profile.change-password')}}">
           <i class="align-middle" data-feather="lock"></i> <span class="align-middle">Change Password</span>
         </a>
       </li>

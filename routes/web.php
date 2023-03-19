@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\ExaminationController;
 use App\Http\Controllers\Doctor\ExaminationController as DoctorExaminationController;
 use App\Http\Controllers\Admin\RegisterPatientController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,12 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::get('/profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
+    Route::put('/profile/change-password', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
+
     Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
         Route::get('/register-patient', [RegisterPatientController::class, 'index'])->name('admin.register-patient.index');
         Route::get('/register-patient/create', [RegisterPatientController::class, 'create'])->name('admin.register-patient.create');
