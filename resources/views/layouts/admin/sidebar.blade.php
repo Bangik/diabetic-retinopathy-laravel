@@ -15,9 +15,15 @@
         </a>
       </li>
 
-      <li class="sidebar-item {{request()->is('admin/register-patient') ? 'active' : ''}}">
-        <a class="sidebar-link" href="{{route('admin.register.patient')}}">
+      <li class="sidebar-item {{request()->is('admin/register-patient/create') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.register-patient.create')}}">
           <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Register Patient</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item {{request()->is('admin/register-patient') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.register-patient.index')}}">
+          <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">List Patient</span>
         </a>
       </li>
 
