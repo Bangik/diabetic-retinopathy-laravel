@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\RegisterPatientController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/register-patient/{id}/edit', [RegisterPatientController::class, 'edit'])->name('admin.register-patient.edit');
         Route::put('/register-patient/{id}', [RegisterPatientController::class, 'update'])->name('admin.register-patient.update');
         Route::delete('/register-patient/{id}', [RegisterPatientController::class, 'destroy'])->name('admin.register-patient.destroy');
+
+        Route::get('/doctor', [DoctorController::class, 'index'])->name('admin.doctor.index');
+        Route::get('/doctor/create', [DoctorController::class, 'create'])->name('admin.doctor.create');
+        Route::post('/doctor', [DoctorController::class, 'store'])->name('admin.doctor.store');
+        Route::get('/doctor/{id}/edit', [DoctorController::class, 'edit'])->name('admin.doctor.edit');
+        Route::put('/doctor/{id}', [DoctorController::class, 'update'])->name('admin.doctor.update');
+        Route::delete('/doctor/{id}', [DoctorController::class, 'destroy'])->name('admin.doctor.destroy');
     });
 });
 
