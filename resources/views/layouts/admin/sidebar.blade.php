@@ -22,9 +22,15 @@
       </li>
 
       
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="#">
-          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Examination</span>
+      <li class="sidebar-item {{request()->is('admin/examination/create') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.examination.create')}}">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Register Examination</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item {{request()->is('admin/examination') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.examination.index')}}">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
         </a>
       </li>
 
