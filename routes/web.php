@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DoctorController;
+use App\Http\Controllers\Admin\ExaminationController;
 use App\Http\Controllers\Admin\RegisterPatientController;
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +37,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/doctor/{id}/edit', [DoctorController::class, 'edit'])->name('admin.doctor.edit');
         Route::put('/doctor/{id}', [DoctorController::class, 'update'])->name('admin.doctor.update');
         Route::delete('/doctor/{id}', [DoctorController::class, 'destroy'])->name('admin.doctor.destroy');
+
+        Route::get('/examination', [ExaminationController::class, 'index'])->name('admin.examination.index');
+        Route::get('/examination/create', [ExaminationController::class, 'create'])->name('admin.examination.create');
+        Route::post('/examination', [ExaminationController::class, 'store'])->name('admin.examination.store');
+        Route::get('/examination/{id}/edit', [ExaminationController::class, 'edit'])->name('admin.examination.edit');
+        Route::put('/examination/{id}', [ExaminationController::class, 'update'])->name('admin.examination.update');
+        Route::delete('/examination/{id}', [ExaminationController::class, 'destroy'])->name('admin.examination.destroy');
     });
 });
 
