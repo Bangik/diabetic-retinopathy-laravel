@@ -21,15 +21,32 @@
         </a>
       </li>
 
+      
+      <li class="sidebar-item">
+        <a class="sidebar-link" href="#">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Examination</span>
+        </a>
+      </li>
+
+      <li class="sidebar-header">
+        Management User
+      </li>
+      
       <li class="sidebar-item {{request()->is('admin/register-patient') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('admin.register-patient.index')}}">
           <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">List Patient</span>
         </a>
       </li>
 
-      <li class="sidebar-item">
-        <a class="sidebar-link" href="#">
-          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Examination</span>
+      <li class="sidebar-item {{request()->is('admin/doctor') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.doctor.index')}}">
+          <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">List Doctor</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item {{request()->is('admin/doctor/create') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.doctor.create')}}">
+          <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Register Doctor</span>
         </a>
       </li>
 
