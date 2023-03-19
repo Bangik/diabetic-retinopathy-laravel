@@ -14,8 +14,8 @@
           <img src="/src/assets/image/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">{{ Auth::user()->name }}</span>
         </a>
         <div class="dropdown-menu dropdown-menu-end">
-          <a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-          <a class="dropdown-item" href="/change-password"><i class="align-middle me-1" data-feather="pie-chart"></i> Change Password</a>
+          <a class="dropdown-item" href="{{route('profile.index')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+          <a class="dropdown-item" href="{{route('profile.change-password')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Change Password</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
