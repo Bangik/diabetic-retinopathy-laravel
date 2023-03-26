@@ -30,11 +30,11 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'name' => 'Patien',
-            'email' => 'patien@gmail.com',
-            'password' => app('hash')->make('patien'),
+            'name' => 'Patient',
+            'email' => 'patient@gmail.com',
+            'password' => app('hash')->make('patient'),
             'id_number' => '123456787',
-            'role' => 'patien',
+            'role' => 'patient',
         ]);
     }
 }
