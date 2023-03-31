@@ -43,6 +43,14 @@
       </li>
       @endif
 
+      @if (Auth::user()->role == 'patient')
+      <li class="sidebar-item {{request()->is('patient/examination') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('patient.examination.index')}}">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
+        </a>
+      </li>
+      @endif
+
       @if (Auth::user()->role == 'admin')
       <li class="sidebar-header">
         Management User

@@ -7,11 +7,11 @@
   <meta name="description" content="An Artificial Intelligence for detect Diabetic Retinopathy stage">
   <meta name="author" content="Bangik">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('css/dark.css')}}">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <title>Diabetic Retinopathy</title>
 </head>
-<body>
+<body data-theme="dark">
   <div class="wrapper">
     @include('layouts.admin.sidebar')
     <div class="main">

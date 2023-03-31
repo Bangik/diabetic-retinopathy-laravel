@@ -63,6 +63,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('/examination/{id}', [DoctorExaminationController::class, 'update'])->name('doctor.examination.update');
         Route::delete('/examination/{id}', [DoctorExaminationController::class, 'destroy'])->name('doctor.examination.destroy');
     });
+
+    Route::group(['middleware' => 'patient', 'prefix' => 'patient'], function () {
+        Route::get('/examination', [DoctorExaminationController::class, 'index'])->name('patient.examination.index');
+        Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('patient.examination.show');
+    });
 });
 
 Auth::routes();
