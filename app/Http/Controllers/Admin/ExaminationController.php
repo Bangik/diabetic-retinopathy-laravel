@@ -3,84 +3,72 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ExaminationRequest;
 use App\Models\Examination;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class ExaminationController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum');
-        $this->middleware('admin');
-    }
-
     public function index()
     {
-        $examination = Examination::all();
-        if ($examination->count() > 0) {
-            return response()->json([
-                'message' => 'success',
-                'data' => $examination,
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'examination not found',
-            ], 404);
-        }
+        $examinations = Examination::orderBy('created_at', 'desc')->get();
+        return view('admin.examination.index', compact('examinations'));
     }
 
-    public function store(ExaminationRequest $request)
+    public function create()
     {
-        $examination = Examination::create($request->all());
-        return response()->json([
-            'message' => 'success',
-            'data' => $examination,
-        ], 200);
+        $patients = User::where('role', 'patient')->get();
+        $doctors = User::where('role', 'doctor')->get();
+        return view('admin.examination.create', compact('patients', 'doctors'));
     }
 
-    public function show($id)
+    public function store(Request $request)
     {
-        $examination = Examination::find($id);
-        if ($examination) {
-            return response()->json([
-                'message' => 'success',
-                'data' => $examination,
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'examination not found',
-            ], 404);
-        }
+        $request->validate([
+            'patient_id' => 'required',
+            'doctor_id' => 'required',
+        ]);
+
+        $last_queue = Examination::where('created_at', '>=', now()->startOfDay())->orderBy('created_at', 'desc')->first();
+        $last_queue_number = $last_queue->queue_number ?? 'Q0000';
+        $last_queue_number = substr($last_queue_number, 1);
+        $last_queue_number = (int) $last_queue_number;
+        $last_queue_number++;
+
+        $request->merge([
+            'status' => 'waiting',
+            'queue_number' => 'Q' . $last_queue_number,
+        ]);
+
+        Examination::create($request->all());
+
+        return redirect()->route('admin.examination.index');
     }
 
-    public function update(ExaminationRequest $request, $id)
+    public function edit($id)
     {
-        $examination = Examination::find($id);
-        if ($examination) {
-            $examination->update($request->all());
-            return response()->json([
-                'message' => 'success',
-                'data' => $examination,
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'examination not found',
-            ], 404);
-        }
+        $examination = Examination::findOrFail($id);
+        $doctors = User::where('role', 'doctor')->get();
+        return view('admin.examination.edit', compact('examination', 'doctors'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'doctor_id' => 'required',
+        ]);
+
+        $examination = Examination::findOrFail($id);
+        $examination->update($request->all());
+
+        return redirect()->route('admin.examination.index');
     }
 
     public function destroy($id)
     {
-        $examination = Examination::find($id);
-        if ($examination) {
-            $examination->delete();
-            return response()->json([
-                'message' => 'success',
-            ], 200);
-        } else {
-            return response()->json([
-                'message' => 'examination not found',
-            ], 404);
-        }
+        $examination = Examination::findOrFail($id);
+        $examination->delete();
+
+        return redirect()->route('admin.examination.index');
     }
 }

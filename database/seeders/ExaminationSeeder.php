@@ -15,9 +15,9 @@ class ExaminationSeeder extends Seeder
     {
         $examinations = [
             [
-                'patient_id' => 1,
+                'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'A001',
+                'queue_number' => 'Q1',
                 'status' => 'waiting',
                 'name' => 'Examination 1',
                 'description' => 'Examination 1 description',
@@ -26,9 +26,9 @@ class ExaminationSeeder extends Seeder
                 'file' => 'Examination 1 file',
             ],
             [
-                'patient_id' => 1,
+                'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'A002',
+                'queue_number' => 'Q2',
                 'status' => 'waiting',
                 'name' => 'Examination 2',
                 'description' => 'Examination 2 description',
@@ -37,9 +37,9 @@ class ExaminationSeeder extends Seeder
                 'file' => 'Examination 2 file',
             ],
             [
-                'patient_id' => 1,
+                'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'A003',
+                'queue_number' => 'Q3',
                 'status' => 'waiting',
                 'name' => 'Examination 3',
                 'description' => 'Examination 3 description',
@@ -48,9 +48,9 @@ class ExaminationSeeder extends Seeder
                 'file' => 'Examination 3 file',
             ],
             [
-                'patient_id' => 1,
+                'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'A004',
+                'queue_number' => 'Q4',
                 'status' => 'waiting',
                 'name' => 'Examination 4',
                 'description' => 'Examination 4 description',
@@ -59,9 +59,9 @@ class ExaminationSeeder extends Seeder
                 'file' => 'Examination 4 file',
             ],
             [
-                'patient_id' => 1,
+                'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'A005',
+                'queue_number' => 'Q005',
                 'status' => 'waiting',
                 'name' => 'Examination 5',
                 'description' => 'Examination 5 description',
