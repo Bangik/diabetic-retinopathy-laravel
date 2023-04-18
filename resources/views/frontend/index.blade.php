@@ -99,48 +99,44 @@
               <div class="center-text justify-content-center">
                   <div class="image-container">
                       <img alt="" class="img-fluid advance-feature-img"
-                           src="/saas2/advance-feature/01.png">
+                           src="{{asset('img/saas2/advance-feature/01.png')}}">
                   </div>
               </div>
           </div>
           <div class="col-xl-4 col-md-5">
               <div>
                   <div class="center-content justify-content-start">
-                      <img alt="" class="img-fluid" src="/saas2/advance-feature/1.png">
+                      <img alt="" class="img-fluid" src="{{asset('img/saas2/advance-feature/1.png')}}">
                       <div class="feature-content">
-                          <h5 class="feature-head">Clean Design</h5>
-                          <p class="feature-para">Lorem Ipsum is simply dummy text
-                              of the printing and industry.</p>
+                          <h5 class="feature-head">Using Artificial Intelligence</h5>
+                          <p class="feature-para">The AI algorithm is trained to detect diabetic retinopathy in the eye images. The algorithm is trained on a large dataset of eye images.</p>
                       </div>
                   </div>
               </div>
               <div>
                   <div class="center-content justify-content-start">
-                      <img alt="" class="img-fluid" src="/saas2/advance-feature/2.png">
+                      <img alt="" class="img-fluid" src="{{asset('img/saas2/advance-feature/2.png')}}">
                       <div class="feature-content">
-                          <h5 class="feature-head">Dedicated Support</h5>
-                          <p class="feature-para">Lorem Ipsum is simply dummy text
-                              of the printing and industry.</p>
+                          <h5 class="feature-head">Fast and Accurate</h5>
+                          <p class="feature-para">The Accuracy of the algorithm is >90% and the time taken to detect diabetic retinopathy is 2 seconds.</p>
                       </div>
                   </div>
               </div>
               <div>
                   <div class="center-content justify-content-start">
-                      <img alt="" class="img-fluid" src="/saas2/advance-feature/3.png">
+                      <img alt="" class="img-fluid" src="{{asset('img/saas2/advance-feature/3.png')}}">
                       <div class="feature-content">
-                          <h5 class="feature-head">Easy Customiable</h5>
-                          <p class="feature-para">Lorem Ipsum is simply dummy text
-                              of the printing and industry.</p>
+                          <h5 class="feature-head">Professional Support</h5>
+                          <p class="feature-para">Support is provided by the team of doctors and engineers.</p>
                       </div>
                   </div>
               </div>
               <div>
                   <div class="center-content justify-content-start">
-                      <img alt="" class="img-fluid" src="/saas2/advance-feature/4.png">
+                      <img alt="" class="img-fluid" src="{{asset('img/saas2/advance-feature/4.png')}}">
                       <div class="feature-content">
-                          <h5 class="feature-head">Multiple Demo</h5>
-                          <p class="feature-para">Lorem Ipsum is simply dummy text
-                              of the printing and industry.</p>
+                          <h5 class="feature-head">Report with Suggestions</h5>
+                          <p class="feature-para">The report is generated with suggestions for the patient.</p>
                       </div>
                   </div>
               </div>
