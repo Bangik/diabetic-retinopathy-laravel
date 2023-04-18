@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('frontend.index');
 });
 
 Route::group(['middleware' => 'auth'], function () {
