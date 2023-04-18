@@ -25,10 +25,12 @@
     <link href="{{asset('css/fontawesome.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/themify.css')}}" rel="stylesheet" type="text/css">
 
-<!-- flat Icons -->
+    <!-- flat Icons -->
     <link href="{{asset('css/flaticon.css')}}" rel="stylesheet" type="text/css">
     <!--magnific popup css-->
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
+    <!--custom css-->
+    @yield('css-frontend')
 </head>
 <body data-offset="80" data-spy="scroll" data-target=".navbar" class="">
 <!--loader start-->
