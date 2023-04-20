@@ -8,6 +8,8 @@
     .saas2.laptop-slider{background:url("{{asset('img/saas2/background/screenshot-bg.png')}}");}
     .saas2.testimonial{background:url("{{asset('img/saas2/background/bg-testimonial.png')}}");}
     footer.footer2.saas2{background:url("{{asset('img/saas2/footer.png')}}") no-repeat top;background-size:cover}
+    .pricing.yoga .price-container .service-feature .image-top,.pricing.saas2 .price-container .service-feature .image-top{margin-left:auto}
+    .pricing.saas2 .price-container .price-feature-container{margin-top:15px}
 </style>
 @endsection
 
@@ -89,9 +91,7 @@
                       <h2>Advance Features</h2>
                   </div>
                   <div class="sub-title">
-                      <p class="sub-title-para">We believe we have created the most efficient SaaS landing page for
-                          your users.
-                          Landing page with features that will convince you to use it for your SaaS business.</p>
+                      <p class="sub-title-para">Our eye exam incorporate cutting-edge Artificial Intelligence technology, ensuring a fast and accurate assessment of your diabetic retinopathy level. Our professional support team is available to assist you throughout the entire process. Once the exam is complete, you will receive a comprehensive report with detailed suggestions to optimize your visual health.</p>
                   </div>
               </div>
           </div>
@@ -152,18 +152,15 @@
       <div class="row">
           <div class="col-lg-6">
               <div class="offers-container">
-                  <h3 class="text-white offer-heading-text">We Offer Quick & Powerful
-                      Business Solution</h3>
+                  <h3 class="text-white offer-heading-text">What you can expect</h3>
                   <div class="bottom-border">
                   </div>
                   <div class="offers-content">
                       <div class="d-flex">
                           <i aria-hidden="true" class="fa fa-check-circle"></i>
                           <div>
-                              <h4 class="offer-main-text text-white">Beautiful Interface Layout</h4>
-                              <p class="offer-sub-text text-white">Lorem Ipsum is simply dummy text of the print- ing
-                                  and typesetting
-                                  industry.</p>
+                              <h4 class="offer-main-text text-white">Before the exam</h4>
+                              <p class="offer-sub-text text-white">If you're seeing a new eye doctor or if you're having your first eye exam, expect questions about your vision and general health history. Your answers help your eye doctor understand your risk of eye disease and vision problems.</p>
                           </div>
                       </div>
                   </div>
@@ -171,10 +168,8 @@
                       <div class="d-flex">
                           <i aria-hidden="true" class="fa fa-check-circle"></i>
                           <div>
-                              <h4 class="offer-main-text text-white">Beautiful Interface Layout</h4>
-                              <p class="offer-sub-text text-white">Lorem Ipsum is simply dummy text of the print- ing
-                                  and typesetting
-                                  industry.</p>
+                              <h4 class="offer-main-text text-white">During the exam</h4>
+                              <p class="offer-sub-text text-white">A clinical assistant or technician might do part of the examination, such as taking your medical history and giving the initial eye test.</p>
                           </div>
                       </div>
                   </div>
@@ -182,10 +177,8 @@
                       <div class="d-flex">
                           <i aria-hidden="true" class="fa fa-check-circle"></i>
                           <div>
-                              <h4 class="offer-main-text text-white">Beautiful Interface Layout</h4>
-                              <p class="offer-sub-text text-white">Lorem Ipsum is simply dummy text of the print- ing
-                                  and typesetting
-                                  industry.</p>
+                              <h4 class="offer-main-text text-white">After the exam</h4>
+                              <p class="offer-sub-text text-white">At the end of your eye exam, you and your doctor will discuss the results of all testing, including an assessment of your vision, your risk of eye disease and preventive measures you can take to protect your eyesight.</p>
                           </div>
                       </div>
                   </div>
@@ -200,151 +193,6 @@
 </section>
 <!--business css end-->
 
-<!--service css start-->
-<section class="saas2 services">
-  <div class="container saas2-services">
-      <div class="row">
-          <div class="col-md-10 offset-md-1">
-              <div class="title">
-                  <div class="main-title">
-                      <h2>our Features</h2>
-                  </div>
-                  <div class="sub-title">
-                      <p class="sub-title-para">We believe we have created the most efficient SaaS landing page for
-                          your users.
-                          Landing page with features that will convince you to use it for your SaaS business.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/1.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Content Management</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/2.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Project Analysis</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/3.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Support & Service</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/4.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Project Management</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/5.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Get Free Update</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-container">
-              <div class="service text-center">
-                  <div class="img-block">
-                      <img alt="" class="service-img img-fluid" src="/saas2/our-feature/6.png">
-                  </div>
-                  <div class="service-feature">
-                      <h4 class="feature-text text-center">Smart Performance</h4>
-                      <p>There are many variations of passages of Lorem Ipsum available, but the ma- jority have
-                          suffered.</p>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-<!--service css end-->
-
-<!--slider css start-->
-<section class="saas2 laptop-slider bg-gradient" id="screenshot">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-10 offset-md-1">
-              <div class="title">
-                  <div class="main-title">
-                      <h2 class="text-white">screen shot</h2>
-                  </div>
-                  <div class="sub-title">
-                      <p class="sub-title-para text-white">We believe we have created the most efficient SaaS landing
-                          page for
-                          your users.
-                          Landing page with features that will convince you to use it for your SaaS business.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="container-fluid">
-      <div class="slider-container">
-          <div class="owl-carousel owl-theme trainers-slider" id="trainers-slider">
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-              <div class="item">
-                  <img alt="" class="img-fluid" src="/saas2/screen-shot/screen.png">
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-<!--slider css start-->
-
 <!--pricing css start-->
 <section class="saas2 pricing m-0" id="plan">
   <div class="col-md-10 offset-md-1 col-12">
@@ -353,13 +201,10 @@
               <div class="col-md-10 offset-md-1">
                   <div class="title">
                       <div class="main-title">
-                          <h2>pricing plan</h2>
+                          <h2>Diabetic Retinopathy Severity Level</h2>
                       </div>
                       <div class="sub-title">
-                          <p class="sub-title-para">We believe we have created the most efficient SaaS landing page
-                              for
-                              your users.
-                              Landing page with features that will convince you to use it for your SaaS business.</p>
+                          <p class="sub-title-para">The severity of diabetic retinopathy is classified into 5 levels. The severity level is determined by the presence of retinal hemorrhages, exudates, and cotton wool spots.</p>
                       </div>
                   </div>
               </div>
@@ -369,20 +214,16 @@
                           <div class="price-container shadows text-center">
                               <div class="service-feature ">
                                   <div class="feature-text">
-                                      <img alt="" class="image-top" src="/yoga-img/abs-yoga.png">
-                                      <h3 class="text-white feature-text-heading text-center">free</h3>
+                                      <img alt="" class="image-top" src="{{asset('img/dr/0.png')}}">
                                   </div>
                               </div>
                               <div>
                                   <div class="price-feature-container ">
                                       <div class="price-features">
-                                          <h6 class="price text-center-feature">100 MB Disk Space</h6>
-                                          <h6 class="price text-center-feature">2 Subdomains</h6>
-                                          <h6 class="price text-center-feature">5 Email Accounts</h6>
-                                          <h6 class="price text-center-feature">Webmail Support</h6>
+                                          <h6 class="price text-center-feature">No disease visible</h6>
                                       </div>
                                       <div class="price-value">
-                                          <h6 class="price text-center">$<span class="large">0</span>/month</h6>
+                                          <h6 class="price text-center">Normal / No DR</h6>
                                       </div>
                                       <a class="btn btn-default btn-gradient" href="#">more</a>
                                   </div>
@@ -393,20 +234,17 @@
                           <div class="price-container shadows text-center">
                               <div class="service-feature ">
                                   <div class="feature-text">
-                                      <img alt="" class="image-top" src="/yoga-img/abs-yoga.png">
-                                      <h3 class="text-white feature-text-heading text-center">medium</h3>
+                                      <img alt="" class="image-top" src="{{asset('img/dr/1.png')}}">
                                   </div>
                               </div>
                               <div>
                                   <div class="price-feature-container ">
                                       <div class="price-features">
-                                          <h6 class="price text-center-feature">100 MB Disk Space</h6>
-                                          <h6 class="price text-center-feature">2 Subdomains</h6>
-                                          <h6 class="price text-center-feature">5 Email Accounts</h6>
-                                          <h6 class="price text-center-feature">Webmail Support</h6>
+                                          <h6 class="price text-center-feature">Non Poliferative DR</h6>
+                                          <h6 class="price text-center-feature">localized microaneurysms</h6>
                                       </div>
                                       <div class="price-value">
-                                          <h6 class="price text-center">$<span class="large">49</span>/month</h6>
+                                          <h6 class="price text-center">Mild NPDR</h6>
                                       </div>
                                       <a class="btn btn-default btn-gradient" href="#">more</a>
                                   </div>
@@ -417,20 +255,19 @@
                           <div class="price-container shadows text-center">
                               <div class="service-feature ">
                                   <div class="feature-text">
-                                      <img alt="" class="image-top" src="/yoga-img/abs-yoga.png">
-                                      <h3 class="text-white feature-text-heading text-center">business</h3>
+                                      <img alt="" class="image-top" src="{{asset('img/dr/2.png')}}">
                                   </div>
                               </div>
                               <div>
                                   <div class="price-feature-container">
                                       <div class="price-features">
-                                          <h6 class="price text-center-feature">100 MB Disk Space</h6>
-                                          <h6 class="price text-center-feature">2 Subdomains</h6>
-                                          <h6 class="price text-center-feature">5 Email Accounts</h6>
-                                          <h6 class="price text-center-feature">Webmail Support</h6>
+                                          <h6 class="price text-center-feature">Non Poliferative DR</h6>
+                                          <h6 class="price text-center-feature">localized microaneurysms</h6>
+                                          <h6 class="price text-center-feature">dot and blot hemorrhages</h6>
+                                          <h6 class="price text-center-feature">Leaks (hard exudates) or closure (cotton wool sposts)</h6>
                                       </div>
                                       <div class="price-value">
-                                          <h6 class="price text-center">$<span class="large">99</span>/month</h6>
+                                          <h6 class="price text-center">Moderate NPDR</h6>
                                       </div>
                                       <a class="btn btn-default btn-gradient" href="#">more</a>
                                   </div>
@@ -441,26 +278,48 @@
                           <div class="price-container shadows text-center">
                               <div class="service-feature ">
                                   <div class="feature-text">
-                                      <img alt="" class="image-top" src="/yoga-img/abs-yoga.png">
-                                      <h3 class="text-white feature-text-heading text-center">business</h3>
+                                      <img alt="" class="image-top" src="{{asset('img/dr/3.png')}}">
                                   </div>
                               </div>
                               <div>
                                   <div class="price-feature-container">
                                       <div class="price-features">
-                                          <h6 class="price text-center-feature">100 MB Disk Space</h6>
-                                          <h6 class="price text-center-feature">2 Subdomains</h6>
-                                          <h6 class="price text-center-feature">5 Email Accounts</h6>
-                                          <h6 class="price text-center-feature">Webmail Support</h6>
+                                          <h6 class="price text-center-feature">Non Poliferative DR</h6>
+                                          <h6 class="price text-center-feature">Moderate NPDR plus</h6>
+                                          <h6 class="price text-center-feature">Intraretinal hemorrhages venous beading</h6>
+                                          <h6 class="price text-center-feature">Intermediate microvascular abnormalities</h6>
                                       </div>
                                       <div class="price-value">
-                                          <h6 class="price text-center">$<span class="large">99</span>/month</h6>
+                                          <h6 class="price text-center">Severe NPDR</h6>
                                       </div>
                                       <a class="btn btn-default btn-gradient" href="#">more</a>
                                   </div>
                               </div>
                           </div>
                       </div>
+                      <div class="item">
+                        <div class="price-container shadows text-center">
+                            <div class="service-feature ">
+                                <div class="feature-text">
+                                    <img alt="" class="image-top" src="{{asset('img/dr/4.png')}}">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="price-feature-container">
+                                    <div class="price-features">
+                                        <h6 class="price text-center-feature">Proliferative DR</h6>
+                                        <h6 class="price text-center-feature">New vessels formation</h6>
+                                        <h6 class="price text-center-feature">Vitreous/preretinal hemorrhages</h6>
+                                        <h6 class="price text-center-feature">Tractional retinal detachment</h6>
+                                    </div>
+                                    <div class="price-value">
+                                        <h6 class="price text-center">PDR</h6>
+                                    </div>
+                                    <a class="btn btn-default btn-gradient" href="#">more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
               </div>
           </div>
