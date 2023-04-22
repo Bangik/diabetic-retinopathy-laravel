@@ -3,6 +3,7 @@
 @section('css-frontend')
 <style>
     .header .bg.saas2-bg{background-image:url("{{asset('img/saas2/slider.png')}}");}
+    .saas2.fixed{background-image: linear-gradient(#9647DB, #5E57EA);}
     .saas2.feature{background-image:url("{{asset('img/saas2/background.png')}}");}
     .saas2.quick-sol{background:url("{{asset('img/saas2/background/quick-sol.png')}}");}
     .saas2.laptop-slider{background:url("{{asset('img/saas2/background/screenshot-bg.png')}}");}
@@ -44,7 +45,7 @@
           </div>
 
           <img alt="" class="img-fluid set-abs background-animate"
-               src="{{asset('img/saas1/background2.png')}}">
+               src="{{asset('img/saas2/background2.png')}}">
           <img alt="" class="img-fluid set-abs img1 move-up-down"
                src="{{asset('img/saas2/header-icon/3.png')}}">
           <img alt="" class="img-fluid set-abs img2 move-right-left"
@@ -186,7 +187,7 @@
           </div>
           <div class="center-text side-img">
               <img alt="" class="img-fluid" data-tilt data-tilt-max="3" data-tilt-perspective="500"
-                   data-tilt-speed="400" src="/saas2/we-offer/img.png">
+                   data-tilt-speed="400" src="{{asset('img/expect.png')}}">
           </div>
       </div>
   </div>
