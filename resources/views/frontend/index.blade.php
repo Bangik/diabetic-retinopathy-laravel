@@ -3,6 +3,7 @@
 @section('css-frontend')
 <style>
     .header .bg.saas2-bg{background-image:url("{{asset('img/saas2/slider.png')}}");}
+    .saas2.fixed{background-image: linear-gradient(#9647DB, #5E57EA);}
     .saas2.feature{background-image:url("{{asset('img/saas2/background.png')}}");}
     .saas2.quick-sol{background:url("{{asset('img/saas2/background/quick-sol.png')}}");}
     .saas2.laptop-slider{background:url("{{asset('img/saas2/background/screenshot-bg.png')}}");}
