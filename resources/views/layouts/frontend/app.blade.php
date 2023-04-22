@@ -10,7 +10,7 @@
     <title>DR - Severity Detection</title>
 
     <!-- Fav icon -->
-    <link href="../assets/images/logo/favicon.png" rel="shortcut icon">
+    <link href="{{asset('img/favicon.svg')}}" rel="shortcut icon">
     <!-- Font Family-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <!--bootstrap css-->
@@ -56,7 +56,7 @@
             <div class="col">
                 <nav>
                     <a class="d-inline-block m-r-auto" href="sass_layout.html">
-                        <img alt="" class="img-fluid" src="../assets/images/logo/1.png">
+                        <img alt="" class="img-fluid" src="{{asset('img/1.png')}}">
                     </a>
                     <div class="responsive-btn">
                         <a class="toggle-nav" href="JavaScript:void(0);">
@@ -93,7 +93,7 @@
                         <h3 class="text-white">About Us</h3>
                     </div>
                     <div class="footer-contant">
-                        <img alt="" class="img-fluid footer-logo" src="../assets/images/logo/1.png">
+                        <img alt="" class="img-fluid footer-logo" src="{{asset('img/1.png')}}">
                         <div class="footer-para">
                             <h6 class="text-white para-address">DR - Severity Detection</h6>
                             <h6 class="text-white para-address">DETECT YOUR DIABETIC RETINOPATHY EARLY</h6>
