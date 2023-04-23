@@ -67,9 +67,9 @@
                         <div class="responsive-btn">
                             <a class="btn-back" href="#"><h5 class="text-dark">back</h5></a>
                         </div>
-                       <ul class="main-menu">
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">DR information</a></li>
+                        <ul class="main-menu">
+                            <li><a href="{{route('index')}}">home</a></li>
+                            <li><a href="{{route('dr-information')}}">DR information</a></li>
                             <li><a href="#">DR detection</a></li>
                             <li><a href="#">login</a></li>
                         </ul>
@@ -111,7 +111,7 @@
                     <div>
                         <ul class="footer-lists">
                             <li>
-                                <a href="#">DR Information</a>
+                                <a href="{{route('dr-information')}}">DR Information</a>
                             </li>
                             <li>
                                 <a href="#">Diabetic Retinopathy Detection</a>
@@ -192,5 +192,6 @@
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{asset('js/script9.js')}}"></script>
 <script src="{{asset('js/layout-fix.js')}}"></script>
+@yield('script-frontend')
 </body>
 </html>
