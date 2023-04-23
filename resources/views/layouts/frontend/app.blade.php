@@ -30,6 +30,17 @@
     <!--magnific popup css-->
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
     <!--custom css-->
+    <style>
+        .header .bg.saas2-bg{background-image:url("{{asset('img/saas2/slider.png')}}");}
+        .saas2.fixed{background-image: linear-gradient(#9647DB, #5E57EA);}
+        .saas2.feature{background-image:url("{{asset('img/saas2/background.png')}}");}
+        .saas2.quick-sol{background:url("{{asset('img/saas2/background/quick-sol.png')}}");}
+        .saas2.laptop-slider{background:url("{{asset('img/saas2/background/screenshot-bg.png')}}");}
+        .saas2.testimonial{background:url("{{asset('img/saas2/background/bg-testimonial.png')}}");}
+        footer.footer2.saas2{background:url("{{asset('img/saas2/footer.png')}}") no-repeat top;background-size:cover}
+        .pricing.yoga .price-container .service-feature .image-top,.pricing.saas2 .price-container .service-feature .image-top{margin-left:auto}
+        .pricing.saas2 .price-container .price-feature-container{margin-top:15px}
+    </style>
     @yield('css-frontend')
 </head>
 <body data-offset="80" data-spy="scroll" data-target=".navbar" class="">
