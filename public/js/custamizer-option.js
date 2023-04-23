@@ -33,9 +33,11 @@
             if($('.theme-layout-version').hasClass('dark')){
                 $('.theme-layout-version').text('Light');
                 $('body').addClass('dark');
+                $('#dark-custom').css({'background-image':'unset', 'background-color':'#1c2440'});
             }else{
                 $('#theme-dark').remove();
                 $('.theme-layout-version').text('Dark');
+                $('#dark-custom').css({'background-image': 'linear-gradient(#9647DB, #5E57EA)', 'background-color':'unset'});
             }
    });
 

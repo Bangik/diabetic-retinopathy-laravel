@@ -21,7 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('index');
+
+Route::get('/dr-information', function () {
+    return view('frontend.dr-information');
+})->name('dr-information');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
