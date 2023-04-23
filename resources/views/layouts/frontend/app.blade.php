@@ -30,6 +30,17 @@
     <!--magnific popup css-->
     <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
     <!--custom css-->
+    <style>
+        .header .bg.saas2-bg{background-image:url("{{asset('img/saas2/slider.png')}}");}
+        .saas2.fixed{background-image: linear-gradient(#9647DB, #5E57EA);}
+        .saas2.feature{background-image:url("{{asset('img/saas2/background.png')}}");}
+        .saas2.quick-sol{background:url("{{asset('img/saas2/background/quick-sol.png')}}");}
+        .saas2.laptop-slider{background:url("{{asset('img/saas2/background/screenshot-bg.png')}}");}
+        .saas2.testimonial{background:url("{{asset('img/saas2/background/bg-testimonial.png')}}");}
+        footer.footer2.saas2{background:url("{{asset('img/saas2/footer.png')}}") no-repeat top;background-size:cover}
+        .pricing.yoga .price-container .service-feature .image-top,.pricing.saas2 .price-container .service-feature .image-top{margin-left:auto}
+        .pricing.saas2 .price-container .price-feature-container{margin-top:15px}
+    </style>
     @yield('css-frontend')
 </head>
 <body data-offset="80" data-spy="scroll" data-target=".navbar" class="">
@@ -50,7 +61,7 @@
 <!--loader end-->
 
 <!--Nav start-->
-<header class="saas2 loding-header nav-abs custom-scroll">
+<header class="saas2 loding-header nav-abs custom-scroll" id="dark-custom">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -67,9 +78,9 @@
                         <div class="responsive-btn">
                             <a class="btn-back" href="#"><h5 class="text-dark">back</h5></a>
                         </div>
-                       <ul class="main-menu">
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">DR information</a></li>
+                        <ul class="main-menu">
+                            <li><a href="{{route('index')}}">home</a></li>
+                            <li><a href="{{route('dr-information')}}">DR information</a></li>
                             <li><a href="#">DR detection</a></li>
                             <li><a href="#">login</a></li>
                         </ul>
@@ -111,13 +122,13 @@
                     <div>
                         <ul class="footer-lists">
                             <li>
-                                <a href="#">DR Information</a>
+                                <a href="#">Request an Appoinment</a>
+                            </li>
+                            <li>
+                                <a href="{{route('dr-information')}}">Diabetic Retinopathy Information</a>
                             </li>
                             <li>
                                 <a href="#">Diabetic Retinopathy Detection</a>
-                            </li>
-                            <li>
-                                <a href="#">Request an Appoinment</a>
                             </li>
                         </ul>
                     </div>
@@ -192,5 +203,6 @@
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{asset('js/script9.js')}}"></script>
 <script src="{{asset('js/layout-fix.js')}}"></script>
+@yield('script-frontend')
 </body>
 </html>
