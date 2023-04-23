@@ -61,7 +61,7 @@
 <!--loader end-->
 
 <!--Nav start-->
-<header class="saas2 loding-header nav-abs custom-scroll">
+<header class="saas2 loding-header nav-abs custom-scroll" id="dark-custom">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -122,13 +122,13 @@
                     <div>
                         <ul class="footer-lists">
                             <li>
-                                <a href="{{route('dr-information')}}">DR Information</a>
+                                <a href="#">Request an Appoinment</a>
+                            </li>
+                            <li>
+                                <a href="{{route('dr-information')}}">Diabetic Retinopathy Information</a>
                             </li>
                             <li>
                                 <a href="#">Diabetic Retinopathy Detection</a>
-                            </li>
-                            <li>
-                                <a href="#">Request an Appoinment</a>
                             </li>
                         </ul>
                     </div>

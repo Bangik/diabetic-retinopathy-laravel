@@ -33,11 +33,11 @@
             if($('.theme-layout-version').hasClass('dark')){
                 $('.theme-layout-version').text('Light');
                 $('body').addClass('dark');
-                $('.saas2').css({'background-image':'unset', 'background-color':'#1c2440'});
+                $('#dark-custom').css({'background-image':'unset', 'background-color':'#1c2440'});
             }else{
                 $('#theme-dark').remove();
                 $('.theme-layout-version').text('Dark');
-                $('.saas2').css({'background-image': 'linear-gradient(#9647DB, #5E57EA)', 'background-color':'unset'});
+                $('#dark-custom').css({'background-image': 'linear-gradient(#9647DB, #5E57EA)', 'background-color':'unset'});
             }
    });
 
