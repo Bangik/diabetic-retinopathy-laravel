@@ -20,7 +20,7 @@
                               <div class="header-sub-text">
                                   <p class="sub-para text-white">Diabetic retinopathy eye screening involves a series of tests to evaluate your vision and check for eye disease. Ophthalmologists will likely use various instruments and <span style="font-weight:bold;">Artificial Intelligence</span> to detect diabetic retinopathy in your eyes</p>
                               </div>
-                              <a class="btn btn-default primary-btn transparent">Request an Appoinment</a>
+                              {{-- <a class="btn btn-default primary-btn transparent">Request an Appoinment</a> --}}
                           </div>
                       </div>
                   </div>
