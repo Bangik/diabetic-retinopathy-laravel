@@ -11,16 +11,16 @@
                       <div class="center-text">
                           <div>
                               <div class="header-text">
-                                  <h1>Eye DR Examination</h1>
+                                  <h1>Eye DR Information</h1>
                               </div>
                               <div class="header-sub-text">
-                                  <h3 class="saas2-sub-text">Detect Your <span class="bold-text">Diabetic Retinopathy Early</span>
+                                  <h3 class="saas2-sub-text">Find out information about <span class="bold-text">Diabetic Retinopathy</span>
                                   </h3>
                               </div>
                               <div class="header-sub-text">
                                   <p class="sub-para text-white">Diabetic retinopathy eye screening involves a series of tests to evaluate your vision and check for eye disease. Ophthalmologists will likely use various instruments and <span style="font-weight:bold;">Artificial Intelligence</span> to detect diabetic retinopathy in your eyes</p>
                               </div>
-                              <a class="btn btn-default primary-btn transparent">Request an Appoinment</a>
+                              {{-- <a class="btn btn-default primary-btn transparent">Request an Appoinment</a> --}}
                           </div>
                       </div>
                   </div>
@@ -122,7 +122,7 @@
           <div class="col-lg-3">
               <div class="blog-side">
                   <div>
-                      <h5 class="blog-title">categories</h5>
+                      <h5 class="blog-title">Menus</h5>
                       <div class="sidebar-container borders">
                           <ul class="sidebar-list">
                               <li class="d-flex">
