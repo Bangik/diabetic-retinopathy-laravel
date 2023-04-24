@@ -27,6 +27,10 @@ Route::get('/dr-information', function () {
     return view('frontend.dr-information');
 })->name('dr-information');
 
+Route::get('/dr-detection', function () {
+    return view('frontend.dr-detection');
+})->name('dr-detection');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
