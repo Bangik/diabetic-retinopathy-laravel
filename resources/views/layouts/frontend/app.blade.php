@@ -81,7 +81,7 @@
                         <ul class="main-menu">
                             <li><a href="{{route('index')}}">home</a></li>
                             <li><a href="{{route('dr-information')}}">DR information</a></li>
-                            <li><a href="#">DR detection</a></li>
+                            <li><a href="{{route('dr-detection')}}">DR detection</a></li>
                             <li><a href="#">login</a></li>
                         </ul>
                     </div>
@@ -128,7 +128,7 @@
                                 <a href="{{route('dr-information')}}">Diabetic Retinopathy Information</a>
                             </li>
                             <li>
-                                <a href="#">Diabetic Retinopathy Detection</a>
+                                <a href="{{route('dr-detection')}}">Diabetic Retinopathy Detection</a>
                             </li>
                         </ul>
                     </div>
