@@ -82,7 +82,7 @@
                             <li><a href="{{route('index')}}">home</a></li>
                             <li><a href="{{route('dr-information')}}">DR information</a></li>
                             <li><a href="{{route('dr-detection')}}">DR detection</a></li>
-                            <li><a href="#">login</a></li>
+                            <li><a href="#" data-target="#login-modal" data-toggle="modal">login</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -93,6 +93,61 @@
 <!--Nav end-->
 
 @yield('content-frontend')
+
+<!-- Login-modal section start -->
+<div class="login-modal">
+    <div aria-hidden="true" class="modal fade" id="login-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button" style="right:16px">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-pills mb-5" id="pills-tab-login" role="tablist">
+                        <li class="nav-item">
+                            <a aria-controls="pills-home" aria-selected="true" class="nav-link active" data-toggle="pill"
+                               href="#pills-home" id="pills-home-tab" role="tab">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tab-Content">
+                        <div aria-labelledby="pills-home-tab" class="tab-pane fade show active" id="pills-home"
+                             role="tabpanel">
+                            <!-- login-form -->
+                            <form action="{{route('login')}}" method="post">
+                                @csrf
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="inputEmail">Email</label>
+                                        <input class="form-control @error('email') is-invalid @enderror" id="inputEmail" placeholder="Email" type="email" name="email">
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="inputPassword05">Password</label>
+                                        <input class="form-control" id="inputPassword05" placeholder="Password" type="password" name="password">
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <button class="btn primary-btn btn-default text-uppercase">Log in</button>
+                            </form>
+                            <!-- end login form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login-modal section end -->
 
 <!--footer start-->
 <footer class="saas2 footer2" id="contact">
@@ -121,9 +176,9 @@
                     <h5 class="footer-headings">Product</h5>
                     <div>
                         <ul class="footer-lists">
-                            <li>
+                            {{-- <li>
                                 <a href="#">Request an Appoinment</a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="{{route('dr-information')}}">Diabetic Retinopathy Information</a>
                             </li>
