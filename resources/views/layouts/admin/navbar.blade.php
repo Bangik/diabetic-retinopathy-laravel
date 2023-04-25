@@ -11,7 +11,7 @@
         </a>
 
         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-          <img src="/src/assets/image/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">{{ Auth::user()->name }}</span>
+          <span class="text-dark">{{ Auth::user()->name }}</span>
         </a>
         <div class="dropdown-menu dropdown-menu-end">
           <a class="dropdown-item" href="{{route('profile.index')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
