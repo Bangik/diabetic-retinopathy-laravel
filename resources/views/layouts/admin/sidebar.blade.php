@@ -79,13 +79,13 @@
         Profile
       </li>
 
-      <li class="sidebar-item">
+      <li class="sidebar-item {{request()->is('profile') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('profile.index')}}">
           <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Profile</span>
         </a>
       </li>
 
-      <li class="sidebar-item">
+      <li class="sidebar-item {{request()->is('profile/change-password') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('profile.change-password')}}">
           <i class="align-middle" data-feather="lock"></i> <span class="align-middle">Change Password</span>
         </a>
