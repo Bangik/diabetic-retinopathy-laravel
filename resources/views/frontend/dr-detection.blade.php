@@ -82,8 +82,8 @@
               </div>
               <div class="shadow-lg p-5 shadow-showcase text-center ">
                 <img src="{{asset('img/dr/0.png')}}" alt="Detection result" class="img-fluid" width="35%" id="img-result">
-                <h3 class="m-0 f-18 text-center shadow-font" id="text-title">Example Result</h3>
-                <p class="m-0 f-14 text-center shadow-font" id="text-desc">Example Description</p>
+                <h3 class="m-0 f-18 text-center shadow-font" id="text-title">Normal Retina</h3>
+                <p class="m-0 f-14 text-center shadow-font" id="text-desc">Keep your healthy life style to prevent diabetes</p>
               </div>
           </div>
       </div>
