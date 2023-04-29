@@ -11,6 +11,18 @@
   </div>
 </div>
 <div class="row">
+  <div class="col-xl-6 col-xxl-7">
+    <div class="card flex-fill w-100">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Queue</h5>
+      </div>
+      <div class="card-body pt-2 pb-3">
+        <div class="chart chart-sm">
+          <h1 class="mt-1 mb-3">Q123</h1>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="col-xl-6 col-xxl-5 d-flex">
     <div class="w-100">
       <div class="row">
@@ -19,19 +31,18 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">Sales</h5>
+                  <h5 class="card-title">Doctor 1</h5>
                 </div>
 
                 <div class="col-auto">
                   <div class="stat text-primary">
-                    <i class="align-middle" data-feather="truck"></i>
+                    <i class="align-middle" data-feather="user"></i>
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">2.382</h1>
+              <h1 class="mt-1 mb-3">Q123</h1>
               <div class="mb-0">
-                <span class="badge badge-primary-light"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                <span class="text-muted">Since last week</span>
+                <span class="text-muted">Examination Room 1</span>
               </div>
             </div>
           </div>
@@ -39,19 +50,18 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">Visitors</h5>
+                  <h5 class="card-title">Doctor 2</h5>
                 </div>
 
                 <div class="col-auto">
                   <div class="stat text-primary">
-                    <i class="align-middle" data-feather="users"></i>
+                    <i class="align-middle" data-feather="user"></i>
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">14.212</h1>
+              <h1 class="mt-1 mb-3">Q122</h1>
               <div class="mb-0">
-                <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-                <span class="text-muted">Since last week</span>
+                <span class="text-muted">Examination Room 2</span>
               </div>
             </div>
           </div>
@@ -61,19 +71,18 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">Earnings</h5>
+                  <h5 class="card-title">-</h5>
                 </div>
 
                 <div class="col-auto">
                   <div class="stat text-primary">
-                    <i class="align-middle" data-feather="dollar-sign"></i>
+                    <i class="align-middle" data-feather="user"></i>
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">$21.300</h1>
+              <h1 class="mt-1 mb-3">-</h1>
               <div class="mb-0">
-                <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-                <span class="text-muted">Since last week</span>
+                <span class="text-muted">Examination Room 3</span>
               </div>
             </div>
           </div>
@@ -81,19 +90,18 @@
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">Orders</h5>
+                  <h5 class="card-title">-</h5>
                 </div>
 
                 <div class="col-auto">
                   <div class="stat text-primary">
-                    <i class="align-middle" data-feather="shopping-cart"></i>
+                    <i class="align-middle" data-feather="user"></i>
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">64</h1>
+              <h1 class="mt-1 mb-3">-</h1>
               <div class="mb-0">
-                <span class="badge badge-danger-light"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-                <span class="text-muted">Since last week</span>
+                <span class="text-muted">Examination Room 4</span>
               </div>
             </div>
           </div>
