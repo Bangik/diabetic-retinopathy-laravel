@@ -17,7 +17,7 @@
             <select name="patient_id" class="form-select @error('patient_id') is-invalid @enderror">
               <option value="">Select Patient</option>
               @foreach ($patients as $patient)
-                <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                <option value="{{ $patient->id }}" {{$patient->id == $id ? 'selected' : ''}}>{{ $patient->name }}</option>
               @endforeach
             </select>
             @error('patient_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
