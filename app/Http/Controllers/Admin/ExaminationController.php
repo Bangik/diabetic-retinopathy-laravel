@@ -15,11 +15,11 @@ class ExaminationController extends Controller
         return view('admin.examination.index', compact('examinations'));
     }
 
-    public function create()
+    public function create($id = null)
     {
         $patients = User::where('role', 'patient')->get();
         $doctors = User::where('role', 'doctor')->get();
-        return view('admin.examination.create', compact('patients', 'doctors'));
+        return view('admin.examination.create', compact('patients', 'doctors', 'id'));
     }
 
     public function store(Request $request)

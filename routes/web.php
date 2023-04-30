@@ -55,7 +55,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::delete('/doctor/{id}', [DoctorController::class, 'destroy'])->name('admin.doctor.destroy');
 
         Route::get('/examination', [ExaminationController::class, 'index'])->name('admin.examination.index');
-        Route::get('/examination/create', [ExaminationController::class, 'create'])->name('admin.examination.create');
+        Route::get('/examination/create/{id?}', [ExaminationController::class, 'create'])->name('admin.examination.create');
         Route::post('/examination', [ExaminationController::class, 'store'])->name('admin.examination.store');
         Route::get('/examination/{id}/edit', [ExaminationController::class, 'edit'])->name('admin.examination.edit');
         Route::put('/examination/{id}', [ExaminationController::class, 'update'])->name('admin.examination.update');
