@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\ExaminationController;
 use App\Http\Controllers\Doctor\ExaminationController as DoctorExaminationController;
 use App\Http\Controllers\Admin\RegisterPatientController;
+use App\Http\Controllers\Patient\PatientController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -73,7 +74,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['middleware' => 'patient', 'prefix' => 'patient'], function () {
-        Route::get('/examination', [DoctorExaminationController::class, 'index'])->name('patient.examination.index');
+        Route::get('/examination', [PatientController::class, 'index'])->name('patient.examination.index');
         Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('patient.examination.show');
     });
 });
