@@ -6,8 +6,14 @@
   </div>
 
   <div class="col-auto ms-auto text-end mt-n1">
-    <a href="#" class="btn btn-light bg-white me-2">Register New Examination</a>
-    <a href="#" class="btn btn-primary">Register New Patient</a>
+    @if (Auth::user()->role == 'admin')
+    <a href="{{route('admin.examination.create')}}" class="btn btn-light bg-white me-2">Register New Examination</a>
+    <a href="{{route('admin.register-patient.create')}}" class="btn btn-primary">Register New Patient</a>
+    @elseif (Auth::user()->role == 'doctor')
+    <a href="{{route('doctor.examination.index')}}" class="btn btn-primary">Start Examination</a>
+    @elseif (Auth::user()->role == 'patient')
+    <a href="{{route('patient.examination.index')}}" class="btn btn-primary">Examination History</a>
+    @endif
   </div>
 </div>
 <div class="row">
