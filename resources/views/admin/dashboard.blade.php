@@ -11,6 +11,8 @@
     <a href="{{route('admin.register-patient.create')}}" class="btn btn-primary">Register New Patient</a>
     @elseif (Auth::user()->role == 'doctor')
     <a href="{{route('doctor.examination.index')}}" class="btn btn-primary">Start Examination</a>
+    @elseif (Auth::user()->role == 'patient')
+    <a href="{{route('patient.examination.index')}}" class="btn btn-primary">Examination History</a>
     @endif
   </div>
 </div>
