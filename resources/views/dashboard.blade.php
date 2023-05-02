@@ -20,11 +20,14 @@
   <div class="col-xl-6 col-xxl-7">
     <div class="card flex-fill w-100">
       <div class="card-header">
-        <h5 class="card-title mb-0">Queue</h5>
+        <h5 class="card-title mb-0">{{$last_queue->doctor->name}}</h5>
       </div>
       <div class="card-body pt-2 pb-3">
         <div class="chart chart-sm">
-          <h1 class="mt-1 mb-3">Q123</h1>
+          <h1 class="mt-1 mb-3">{{$last_queue->queue_number}}</h1>
+          <div class="mb-0">
+            <span class="text-muted">Examination Room {{$last_queue->room_number}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -33,11 +36,12 @@
     <div class="w-100">
       <div class="row">
         <div class="col-sm-6">
+          @for ($i = 0; $i < 2; $i++)
           <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">Doctor 1</h5>
+                  <h5 class="card-title">{{$be_examined_rooms12[$i] == null ? '-' : $be_examined_rooms12[$i]->doctor->name}}</h5>
                 </div>
 
                 <div class="col-auto">
@@ -46,38 +50,21 @@
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">Q123</h1>
+              <h1 class="mt-1 mb-3">{{$be_examined_rooms12[$i] == null ? '-' : $be_examined_rooms12[$i]->queue_number}}</h1>
               <div class="mb-0">
-                <span class="text-muted">Examination Room 1</span>
+                <span class="text-muted">Examination Room {{$be_examined_rooms12[$i] == null ? '-' : $be_examined_rooms12[$i]->room_number}}</span>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col mt-0">
-                  <h5 class="card-title">Doctor 2</h5>
-                </div>
-
-                <div class="col-auto">
-                  <div class="stat text-primary">
-                    <i class="align-middle" data-feather="user"></i>
-                  </div>
-                </div>
-              </div>
-              <h1 class="mt-1 mb-3">Q122</h1>
-              <div class="mb-0">
-                <span class="text-muted">Examination Room 2</span>
-              </div>
-            </div>
-          </div>
+          @endfor
         </div>
         <div class="col-sm-6">
+          @for ($j = 0; $j < 2; $j++)
           <div class="card">
             <div class="card-body">
               <div class="row">
                 <div class="col mt-0">
-                  <h5 class="card-title">-</h5>
+                  <h5 class="card-title">{{$be_examined_rooms34[$j] == null ? '-' : $be_examined_rooms12[$j]->doctor->name}}</h5>
                 </div>
 
                 <div class="col-auto">
@@ -86,31 +73,13 @@
                   </div>
                 </div>
               </div>
-              <h1 class="mt-1 mb-3">-</h1>
+              <h1 class="mt-1 mb-3">{{$be_examined_rooms34[$j] == null ? '-' : $be_examined_rooms12[$j]->queue_number}}</h1>
               <div class="mb-0">
-                <span class="text-muted">Examination Room 3</span>
+                <span class="text-muted">Examination Room {{$be_examined_rooms34[$j] == null ? '-' : $be_examined_rooms12[$j]->room_number}}</span>
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col mt-0">
-                  <h5 class="card-title">-</h5>
-                </div>
-
-                <div class="col-auto">
-                  <div class="stat text-primary">
-                    <i class="align-middle" data-feather="user"></i>
-                  </div>
-                </div>
-              </div>
-              <h1 class="mt-1 mb-3">-</h1>
-              <div class="mb-0">
-                <span class="text-muted">Examination Room 4</span>
-              </div>
-            </div>
-          </div>
+          @endfor
         </div>
       </div>
     </div>
