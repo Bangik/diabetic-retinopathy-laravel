@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\ExaminationController;
 use App\Http\Controllers\Doctor\ExaminationController as DoctorExaminationController;
