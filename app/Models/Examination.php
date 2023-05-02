@@ -14,6 +14,7 @@ class Examination extends Model
         'doctor_id',
         'queue_number',
         'status',
+        'room_number',
         'name',
         'description',
         'result',
