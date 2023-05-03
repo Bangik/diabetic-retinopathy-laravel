@@ -85,6 +85,7 @@
     </div>
   </div>
 </div>
+@if (Auth::user()->role != 'patient')
 <div class="row">
   <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
     <div class="card flex-fill w-100">
@@ -122,6 +123,46 @@
     </div>
   </div>
 </div>
+@endif
+@if (Auth::user()->role == 'patient')
+<div class="row">
+  <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
+    <div class="card flex-fill w-100">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Examination History</h5>
+      </div>
+      <div class="card-body px-4">
+        <div class="table-responsive">
+          <table id="datatables-reponsive" class="table table-striped" width="100%">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">ID Number</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($patients as $patient)
+              <tr>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td>{{$patient->name}}</td>
+                <td>{{$patient->id_number}}</td>
+                <td>{{$patient->status}}</td>
+                <td>
+                  <a href="{{route('admin.examination.create', $patient->id)}}" class="btn btn-sm btn-primary">New Examination</a>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endif
 @endsection
 
 @section('script')
