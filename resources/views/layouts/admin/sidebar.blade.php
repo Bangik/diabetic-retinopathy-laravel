@@ -46,7 +46,7 @@
       @if (Auth::user()->role == 'patient')
       <li class="sidebar-item {{request()->is('patient/examination') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('patient.examination.index')}}">
-          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Examination History</span>
         </a>
       </li>
       @endif
