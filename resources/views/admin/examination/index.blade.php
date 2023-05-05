@@ -17,6 +17,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Patient Name</th>
                 <th scope="col">Doctor Name</th>
+                <th scope="col">Room</th>
                 <th scope="col">Queue</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
@@ -28,6 +29,7 @@
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$examination->patient->name}}</td>
                 <td>{{$examination->doctor->name}}</td>
+                <td>{{$examination->room_number}}</td>
                 <td>{{$examination->queue_number}}</td>
                 <td>{{$examination->status}}</td>
                 <td>
