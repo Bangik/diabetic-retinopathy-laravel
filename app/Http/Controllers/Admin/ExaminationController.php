@@ -27,6 +27,7 @@ class ExaminationController extends Controller
         $request->validate([
             'patient_id' => 'required',
             'doctor_id' => 'required',
+            'room_number' => 'required'
         ]);
 
         $last_queue = Examination::where('created_at', '>=', now()->startOfDay())->orderBy('created_at', 'desc')->first();
@@ -56,6 +57,7 @@ class ExaminationController extends Controller
     {
         $request->validate([
             'doctor_id' => 'required',
+            'room_number' => 'required'
         ]);
 
         $examination = Examination::findOrFail($id);
