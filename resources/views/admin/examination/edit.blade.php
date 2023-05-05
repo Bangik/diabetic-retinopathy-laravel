@@ -24,6 +24,17 @@
             @error('doctor_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
+            <label class="form-label">Select Room</label>
+            <select name="room_number" class="form-select @error('room_number') is-invalid @enderror">
+              <option value="">Select Room</option>
+              <option value="1">Room 1</option>
+              <option value="2">Room 2</option>
+              <option value="3">Room 3</option>
+              <option value="4">Room 4</option>
+            </select>
+            @error('room_number')<div class="invalid-feedback">{{ $message }}</div>@enderror
+          </div>
+          <div class="mb-3">
             <button class="btn btn-primary">Save</button>
           </div>
         </form>

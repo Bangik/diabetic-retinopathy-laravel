@@ -17,7 +17,7 @@ class ExaminationSeeder extends Seeder
             [
                 'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'Q001',
+                'queue_number' => 'Q1',
                 'status' => 'be examined',
                 'room_number' => '1',
                 'name' => 'Examination 1',
@@ -29,7 +29,7 @@ class ExaminationSeeder extends Seeder
             [
                 'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'Q002',
+                'queue_number' => 'Q2',
                 'status' => 'waiting',
                 'room_number' => '2',
                 'name' => 'Examination 2',
@@ -41,7 +41,7 @@ class ExaminationSeeder extends Seeder
             [
                 'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'Q003',
+                'queue_number' => 'Q3',
                 'status' => 'waiting',
                 'room_number' => '3',
                 'name' => 'Examination 3',
@@ -53,7 +53,7 @@ class ExaminationSeeder extends Seeder
             [
                 'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'Q004',
+                'queue_number' => 'Q4',
                 'status' => 'waiting',
                 'room_number' => '4',
                 'name' => 'Examination 4',
@@ -65,7 +65,7 @@ class ExaminationSeeder extends Seeder
             [
                 'patient_id' => 3,
                 'doctor_id' => 2,
-                'queue_number' => 'Q005',
+                'queue_number' => 'Q5',
                 'status' => 'waiting',
                 'room_number' => '1',
                 'name' => 'Examination 5',
