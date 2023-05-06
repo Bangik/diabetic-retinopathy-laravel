@@ -50,3 +50,18 @@
   </div>
 </div>
 @endsection
+
+@section('script')
+<script src="{{asset('js/jquery-3.5.1.js')}}"></script>
+<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/datatables.js')}}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+			// Datatables Responsive
+			$("#datatables-reponsive").DataTable({
+				responsive: true
+			});
+		});
+	
+</script>
+@endsection
