@@ -23,7 +23,7 @@ class DashboardController extends Controller
         } else if(auth()->user()->role == 'doctor'){
             $patients = Examination::where('doctor_id', auth()->user()->id)->where('created_at', '>=', now()->subDays(7))->orderBy('created_at', 'desc')->get();
         } else {
-            $patients = Examination::where('patient_id', auth()->user()->id)->where('created_at', '>=', now()->subDays(7))->orderBy('created_at', 'desc')->get();
+            $patients = Examination::where('patient_id', auth()->user()->id)->orderBy('created_at', 'desc')->get();
         }
         $patients = $patients ?? [];
         return view('dashboard', compact('patients', 'last_queue', 'be_examined_rooms12', 'be_examined_rooms34'));

@@ -11,8 +11,14 @@ class ExaminationController extends Controller
 {
     public function index()
     {
-        $examinations = Examination::orderBy('created_at', 'desc')->get();
+        $examinations = Examination::where('created_at', '>=', now()->startOfDay())->orderBy('created_at', 'desc')->get();
         return view('admin.examination.index', compact('examinations'));
+    }
+
+    public function indexAll()
+    {
+        $examinations = Examination::orderBy('created_at', 'desc')->get();
+        return view('admin.examination.indexAll', compact('examinations'));
     }
 
     public function create($id = null)
