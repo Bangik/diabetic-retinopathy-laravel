@@ -15,6 +15,7 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
+                <th scope="col">Date</th>
                 <th scope="col">Patient Name</th>
                 <th scope="col">Doctor Name</th>
                 <th scope="col">Room</th>
@@ -27,6 +28,7 @@
               @foreach ($examinations as $examination)
               <tr>
                 <th scope="row">{{$loop->iteration}}</th>
+                <td>{{Carbon\Carbon::parse($examination->created_at)->format('d-M-Y')}}</td>
                 <td>{{$examination->patient->name}}</td>
                 <td>{{$examination->doctor->name}}</td>
                 <td>{{$examination->room_number}}</td>
