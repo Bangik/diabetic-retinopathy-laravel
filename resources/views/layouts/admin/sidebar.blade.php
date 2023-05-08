@@ -30,7 +30,13 @@
 
       <li class="sidebar-item {{request()->is('admin/examination') ? 'active' : ''}}">
         <a class="sidebar-link" href="{{route('admin.examination.index')}}">
-          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination</span>
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination Today</span>
+        </a>
+      </li>
+
+      <li class="sidebar-item {{request()->is('admin/examination-all') ? 'active' : ''}}">
+        <a class="sidebar-link" href="{{route('admin.examination.indexAll')}}">
+          <i class="align-middle" data-feather="eye"></i> <span class="align-middle">Queue Examination All</span>
         </a>
       </li>
       @endif
