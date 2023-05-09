@@ -30,12 +30,12 @@ class ProfileController extends Controller
     {
         $request->validate([
             'current_password' => 'required',
-            'password' => 'required|confirmed',
+            'password' => 'required|confirmed|min:8',
         ]);
 
         $user = User::find(auth()->user()->id);
         if (!Hash::check($request->current_password, $user->password)) {
-            return redirect()->back()->with('error', 'Current password is incorrect');
+            return redirect()->back()->withErrors(['current_password' => 'Current password does not match!']);
         }
 
         $user->password = Hash::make($request->password);
