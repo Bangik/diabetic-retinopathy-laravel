@@ -10,7 +10,7 @@ class DoctorController extends Controller
 {
     public function index()
     {
-        $doctors = User::where('role', 'doctor')->get();
+        $doctors = User::where('role', 'doctor')->orderBy('id', 'desc')->get();
         return view('admin.doctor.index', compact('doctors'));
     }
 
