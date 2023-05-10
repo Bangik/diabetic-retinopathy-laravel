@@ -10,7 +10,7 @@ class RegisterPatientController extends Controller
 {
     public function index()
     {
-        $patients = User::where('role', 'patient')->get();
+        $patients = User::where('role', 'patient')->orderBy('id', 'desc')->get();
         return view('admin.register-patient.index', compact('patients'));
     }
 
