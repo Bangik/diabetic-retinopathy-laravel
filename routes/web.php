@@ -32,6 +32,14 @@ Route::get('/dr-detection', function () {
     return view('frontend.dr-detection');
 })->name('dr-detection');
 
+Route::get('/terms-and-conditions', function () {
+    return view('frontend.terms-conditions');
+})->name('terms-and-conditions');
+
+Route::get('/privacy-policy', function () {
+    return view('frontend.privacy-policy');
+})->name('privacy-policy');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
