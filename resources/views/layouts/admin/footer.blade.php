@@ -9,16 +9,13 @@
       <div class="col-6 text-end">
         <ul class="list-inline">
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Support</a>
-          </li>
-          <li class="list-inline-item">
             <a class="text-muted" href="#" target="_blank">Help Center</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Privacy</a>
+            <a class="text-muted" href="{{route('privacy-policy')}}" target="_blank">Privacy</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Terms</a>
+            <a class="text-muted" href="{{route('terms-and-conditions')}}" target="_blank">Terms</a>
           </li>
         </ul>
       </div>
