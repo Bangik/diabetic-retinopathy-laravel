@@ -80,6 +80,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('doctor.examination.show');
         Route::put('/examination/{id}', [DoctorExaminationController::class, 'update'])->name('doctor.examination.update');
         Route::delete('/examination/{id}', [DoctorExaminationController::class, 'destroy'])->name('doctor.examination.destroy');
+        Route::get('/examination/{id}/print', [DoctorExaminationController::class, 'print'])->name('doctor.examination.print');
+        Route::get('/examination/{id}/export', [DoctorExaminationController::class, 'exportPDF'])->name('doctor.examination.export');
     });
 
     Route::group(['middleware' => 'patient', 'prefix' => 'patient'], function () {
