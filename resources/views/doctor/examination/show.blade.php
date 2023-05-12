@@ -7,6 +7,10 @@
   <div class="col-12 col-lg-12">
     <div class="card">
       <div class="card-header">
+        <div class="float-end">
+          <a href="{{route('doctor.examination.print', $examination->id)}}" class="btn btn-primary btn-sm" target="_blank"><i data-feather="printer"></i> Print</a>
+          <a href="{{route('doctor.examination.export', $examination->id)}}" class="btn btn-primary btn-sm"><i data-feather="file-text"></i> Export PDF</a>
+        </div>
         <h5 class="card-title mb-0">Detail of examination result</h5>
       </div>
       <div class="card-body">
