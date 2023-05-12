@@ -82,7 +82,11 @@
                             <li><a href="{{route('index')}}">home</a></li>
                             <li><a href="{{route('dr-information')}}">DR information</a></li>
                             <li><a href="{{route('dr-detection')}}">DR detection</a></li>
+                            @if (Auth::check())
+                                <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+                            @else
                             <li><a href="#" data-target="#login-modal" data-toggle="modal">login</a></li>
+                            @endif
                         </ul>
                     </div>
                 </nav>
@@ -202,10 +206,10 @@
                                 <a href="#">User guide</a>
                             </li>
                             <li>
-                                <a href="#">Terms of srvices</a>
+                                <a href="{{route('terms-and-conditions')}}">Terms of srvices</a>
                             </li>
                             <li>
-                                <a href="#">Privact policy</a>
+                                <a href="{{route('privacy-policy')}}">Privact policy</a>
                             </li>
                         </ul>
                     </div>
