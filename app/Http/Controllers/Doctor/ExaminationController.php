@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Doctor;
 use App\Http\Controllers\Controller;
 use App\Models\Examination;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ExaminationController extends Controller
 {
@@ -35,5 +36,18 @@ class ExaminationController extends Controller
     {
         $examination = Examination::findOrFail($id);
         return view('doctor.examination.show', compact('examination'));
+    }
+
+    public function exportPDF($id)
+    {
+        $examination = Examination::findOrFail($id);
+        $pdf = Pdf::loadView('report', compact('examination'));
+        return $pdf->download('examination.pdf');
+    }
+
+    public function print($id)
+    {
+        $examination = Examination::findOrFail($id);
+        return view('report', compact('examination'));
     }
 }
