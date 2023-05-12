@@ -31,6 +31,7 @@
     }
   </style>
   <title>Diabetic Retinopathy</title>
+  @yield('style')
 </head>
 <body data-theme="colored" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default" cz-shortcut-listen="true">
   <div class="wrapper">
