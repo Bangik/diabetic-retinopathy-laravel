@@ -123,7 +123,7 @@
           </tr>
           <tr>
             <th>Date of Exam</th>
-            <td>{{ Carbon\Carbon::parse($examination->created_at)->format('d/M/Y') }}</td>
+            <td>{{ Carbon\Carbon::parse($examination->created_at)->format('d M Y') }}</td>
           </tr>
         </table>
       </div>
@@ -135,12 +135,36 @@
             <th>Retinopathy Grade</th>
           </tr>
           <tr>
-            <td>Right</td>
-            <td>Mild</td>
+            <td>Left</td>
+            <td>
+              @if ($examination->result == 0)
+                Normal
+              @elseif ($examination->result == 1)
+                Diabetic Retinopathy Mild
+              @elseif ($examination->result == 2)
+                Diabetic Retinopathy Moderate
+              @elseif ($examination->result == 3)
+                Diabetic Retinopathy Severe
+              @elseif ($examination->result == 4)
+                Diabetic Retinopathy Proliferative
+              @endif
+            </td>
           </tr>
           <tr>
-            <td>Left</td>
-            <td>Moderate</td>
+            <td>Right</td>
+            <td>
+              @if ($examination->result2 == 0)
+                Normal
+              @elseif ($examination->result2 == 1)
+                Diabetic Retinopathy Mild
+              @elseif ($examination->result2 == 2)
+                Diabetic Retinopathy Moderate
+              @elseif ($examination->result2 == 3)
+                Diabetic Retinopathy Severe
+              @elseif ($examination->result2 == 4)
+                Diabetic Retinopathy Proliferative
+              @endif
+            </td>
           </tr>
         </table>
       </div>

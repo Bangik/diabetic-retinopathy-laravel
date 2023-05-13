@@ -33,6 +33,7 @@
                 <td>{{$examination->queue_number}}</td>
                 <td>{{$examination->status}}</td>
                 <td>
+                  <a href="{{route('admin.examination.show', $examination->id)}}" class="btn btn-sm btn-primary">Detail</a>
                   <a href="{{route('admin.examination.edit', $examination->id)}}" class="btn btn-sm btn-primary">Edit</a>
                   <form action="{{route('admin.examination.destroy', $examination->id)}}" method="post" class="d-inline">
                     @csrf

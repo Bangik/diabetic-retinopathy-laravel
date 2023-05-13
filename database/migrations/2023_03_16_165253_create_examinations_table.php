@@ -21,8 +21,10 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('description')->nullable();
             $table->string('result')->nullable();
+            $table->string('result2')->nullable();
             $table->string('action')->nullable();
             $table->string('file')->nullable();
+            $table->string('file2')->nullable();
             $table->timestamps();
         });
 
