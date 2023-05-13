@@ -90,65 +90,66 @@
                   <h3 class="blog-head">Diabetic Retinopathy Severity Level</h3>
                   <div class="blog-divider"></div>
                   <div class="blog-description">
-                      <p>
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                          been
-                          the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                          galley
-                          of type and scrambled it to make a type specimen book. It has survived not only five
-                          centuries,
-                          but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                          popularised
-                          in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                          recently
-                          with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                      </p>
-                      <p>
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                          been the
-                          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                          of type
-                          and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                          also the
-                          leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                          1960s with the
-                          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                          publishing software
-                          like Aldus PageMaker including versions of Lorem Ipsum.
-                      </p>
+                        <p>
+                            Diabetic retinopathy is a compilation of diabetes mellitus characterized by damage and blockage of the retinal blood vessels. Early symptoms of diabetic retinopathy are the formation of microaneurysms and leaks in blood vessels, venous abnormalities, retina swelling, abnormal growth of new blood vessels, and damage to nerve tissue (Abdullah et al., 2022). Diabetic retinopathy at all stages can cause decreased vision within six months, accompanied by the appearance of black shadows in the vision. It can even cause blindness if not treated quickly (Yusran, 2017).
+                        </p>
+                        <p>
+                            Medical examination of patients with Diabetic Retinopathy is carried out in one way: direct observation by a doctor on the patient's retinal image taken using a fundus camera. A doctor will analyze the results of the retinal image; this examination usually requires high concentration in analyzing the image. In this study, the object area used is Hemorrhages which are damaged due to Diabetic Retinopathy in the form of bleeding that occurs in blood vessels marked by red blood spots due to the rupture of Microaneurysms.
+                        </p>
+                        <p>
+                            Abnormalities in the retina of the eye caused by Diabetic Retinopathy are abnormalities in the blood vessels of the eye's retina. One example of Diabetic Retinopathy symptoms that can be seen from the blood vessels includes the appearance of a Microaneurysm, Hemorrhages, and Exudates, which are caused by a bulge in the blood vessels of the retina of the eye.
+                        </p>
+                        <p id="dr-0">
+                            Diabetic retinopathy is divided into two types worldwide, non-proliferative diabetic retinopathy (NPDR) and proliferative diabetic retinopathy (PDR). In this study, the two types of diabetic retinopathy were divided into five grades, including normal, mild non-proliferative diabetic retinopathy (mild-NPDR), moderate non-proliferative diabetic retinopathy (moderate-NPDR), and severe non-proliferative diabetic retinopathy (NPDR). Proliferative diabetic retinopathy (severe - NPDR) and proliferative diabetic retinopathy (PDR). The five stages of diabetic retinopathy are described as follows:
+                        </p>
+                        <p id="dr-2">
+                            <b>Normal</b> - The retina is normal, no abnormalities are found.
+                        </p>
+                        <p>
+                            <b>Mild NPDR</b> - Microaneurysms are found in the retina, which is a small bulge in the blood vessels of the retina.
+                        </p>
+                        <p id="dr-3">
+                            <b>Moderate NPDR</b> - Microaneurysms and Hemorrhages are found in the retina, which is a small bulge in the blood vessels of the retina and bleeding in the blood vessels of the retina.
+                        </p>
+                        <p id="dr-4">
+                            <b>Severe NPDR</b> - Microaneurysms, Hemorrhages, and Venous beading are found in the retina, which is a small bulge in the blood vessels of the retina, bleeding in the blood vessels of the retina, and the appearance of a curved blood vessel.
+                        </p>
+                        <p>
+                            <b>PDR</b> - Microaneurysms, Hemorrhages, Venous beading, and Neovascularization are found in the retina, which is a small bulge in the blood vessels of the retina, bleeding in the blood vessels of the retina, the appearance of a curved blood vessel, and the appearance of new blood vessels.
+                        </p>
                   </div>
               </div>
           </div>
           <div class="col-lg-3">
               <div class="blog-side">
                   <div>
-                      <h5 class="blog-title">Menus</h5>
+                      <h5 class="blog-title">Retinopathy Level</h5>
                       <div class="sidebar-container borders">
                           <ul class="sidebar-list">
                               <li class="d-flex">
-                                  <a href="#">
-                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Lorem Ipsum Is Simple
-                                  </a>
+                                  <p>
+                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Normal
+                                  </p>
                               </li>
                               <li class="d-flex">
-                                  <a href="#">
-                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Many Variations
-                                  </a>
+                                  <p>
+                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Mild NPDR
+                                  </p>
                               </li>
                               <li class="d-flex">
-                                  <a href="#">
-                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>random text
-                                  </a>
+                                  <p>
+                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Moderate NPDR
+                                  </p>
                               </li>
                               <li class="d-flex">
-                                  <a href="#">
-                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>lorem ipsum.
-                                  </a>
+                                  <p>
+                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>Severe NPDR
+                                  </p>
                               </li>
                               <li class="d-flex">
-                                  <a href="#">
-                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>it's Random.
-                                  </a>
+                                  <p>
+                                      <i aria-hidden="true" class="fa fa-angle-right m-r-15"></i>PDR
+                                  </p>
                               </li>
                           </ul>
                       </div>

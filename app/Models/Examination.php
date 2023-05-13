@@ -18,8 +18,10 @@ class Examination extends Model
         'name',
         'description',
         'result',
+        'result2',
         'action',
         'file',
+        'file2',
     ];
 
     public function patient()
