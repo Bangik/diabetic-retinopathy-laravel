@@ -70,6 +70,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/examination/{id}/edit', [ExaminationController::class, 'edit'])->name('admin.examination.edit');
         Route::put('/examination/{id}', [ExaminationController::class, 'update'])->name('admin.examination.update');
         Route::delete('/examination/{id}', [ExaminationController::class, 'destroy'])->name('admin.examination.destroy');
+        Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('admin.examination.show');
     });
 
     Route::group(['middleware' => 'doctor', 'prefix' => 'doctor'], function () {
@@ -80,14 +81,15 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('doctor.examination.show');
         Route::put('/examination/{id}', [DoctorExaminationController::class, 'update'])->name('doctor.examination.update');
         Route::delete('/examination/{id}', [DoctorExaminationController::class, 'destroy'])->name('doctor.examination.destroy');
-        Route::get('/examination/{id}/print', [DoctorExaminationController::class, 'print'])->name('doctor.examination.print');
-        Route::get('/examination/{id}/export', [DoctorExaminationController::class, 'exportPDF'])->name('doctor.examination.export');
     });
-
+    
     Route::group(['middleware' => 'patient', 'prefix' => 'patient'], function () {
         Route::get('/examination', [PatientController::class, 'index'])->name('patient.examination.index');
         Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('patient.examination.show');
     });
+
+    Route::get('/examination/{id}/print', [DoctorExaminationController::class, 'print'])->name('doctor.examination.print');
+    Route::get('/examination/{id}/export', [DoctorExaminationController::class, 'exportPDF'])->name('doctor.examination.export');
 });
 
 Auth::routes();
