@@ -20,13 +20,13 @@
   <div class="col-xl-6 col-xxl-7">
     <div class="card flex-fill w-100">
       <div class="card-header">
-        <h5 class="card-title mb-0">{{$last_queue->doctor->name}}</h5>
+        <h5 class="card-title mb-0">{{$last_queue == null ? '-' : $last_queue->doctor->name}}</h5>
       </div>
       <div class="card-body pt-2 pb-3">
         <div class="chart chart-sm">
-          <h1 class="mt-1 mb-3">{{$last_queue->queue_number}}</h1>
+          <h1 class="mt-1 mb-3">{{$last_queue == null ? '-' : $last_queue->queue_number}}</h1>
           <div class="mb-0">
-            <span class="text-muted">Examination Room {{$last_queue->room_number}}</span>
+            <span class="text-muted">Examination Room {{$last_queue == null ? '-' : $last_queue->room_number}}</span>
           </div>
         </div>
       </div>
