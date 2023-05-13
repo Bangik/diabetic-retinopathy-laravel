@@ -28,8 +28,8 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $seed = new \Database\Seeders\ExaminationSeeder();
-        $seed->run();
+        // $seed = new \Database\Seeders\ExaminationSeeder();
+        // $seed->run();
     }
 
     /**
