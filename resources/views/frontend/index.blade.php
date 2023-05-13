@@ -212,7 +212,7 @@
                                       <div class="price-value">
                                           <h6 class="price text-center">Normal / No DR</h6>
                                       </div>
-                                      <a class="btn btn-default btn-gradient" href="#">more</a>
+                                      <a class="btn btn-default btn-gradient" href="{{route('dr-information')}}#dr-0">more</a>
                                   </div>
                               </div>
                           </div>
@@ -233,7 +233,7 @@
                                       <div class="price-value">
                                           <h6 class="price text-center">Mild NPDR</h6>
                                       </div>
-                                      <a class="btn btn-default btn-gradient" href="#">more</a>
+                                      <a class="btn btn-default btn-gradient" href="{{route('dr-information')}}#dr-0">more</a>
                                   </div>
                               </div>
                           </div>
@@ -256,7 +256,7 @@
                                       <div class="price-value">
                                           <h6 class="price text-center">Moderate NPDR</h6>
                                       </div>
-                                      <a class="btn btn-default btn-gradient" href="#">more</a>
+                                      <a class="btn btn-default btn-gradient" href="{{route('dr-information')}}#dr-2">more</a>
                                   </div>
                               </div>
                           </div>
@@ -279,7 +279,7 @@
                                       <div class="price-value">
                                           <h6 class="price text-center">Severe NPDR</h6>
                                       </div>
-                                      <a class="btn btn-default btn-gradient" href="#">more</a>
+                                      <a class="btn btn-default btn-gradient" href="{{route('dr-information')}}#dr-3">more</a>
                                   </div>
                               </div>
                           </div>
@@ -302,7 +302,7 @@
                                     <div class="price-value">
                                         <h6 class="price text-center">PDR</h6>
                                     </div>
-                                    <a class="btn btn-default btn-gradient" href="#">more</a>
+                                    <a class="btn btn-default btn-gradient" href="{{route('dr-information')}}#dr-4">more</a>
                                 </div>
                             </div>
                         </div>
