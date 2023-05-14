@@ -17,17 +17,12 @@ jobs:
 
       - name: Deploy to Server 1
         # deploy with ssh and send command git pull
-        env:
-          TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         uses:
-          appleboy/ssh-action@v0.1.5
+          appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/diabetic-retinopathy-laravel
-            git config --global credential.helper store
-            git config --global user.email aldi.novaldi.frmnsyah@gmail.com
-            git config --global user.name Bangik
-            git pull https://Bangik:${{ env.TOKEN }}@github.com/Bangik/diabetic-retinopathy-laravel.git
+            git pull
