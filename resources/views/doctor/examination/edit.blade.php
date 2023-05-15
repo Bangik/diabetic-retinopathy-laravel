@@ -136,7 +136,7 @@
 
           // update database
           $.ajax({
-            url: "{{route('doctor.examination.update', $examination->id)}}",
+            url: "{{route('doctor.examination.updateImage', $examination->id)}}",
             type: "POST",
             data: {
               _token: "{{csrf_token()}}",
@@ -196,7 +196,7 @@
           $('input[name=upload_file2]').val('');
 
           $.ajax({
-            url: "{{route('doctor.examination.update', $examination->id)}}",
+            url: "{{route('doctor.examination.updateImage', $examination->id)}}",
             type: "POST",
             data: {
               _token: "{{csrf_token()}}",
