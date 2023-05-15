@@ -14,6 +14,10 @@
         <div class="mb-3">
           <input type="file" name="upload_file">
         </div>
+        {{-- add progress bar --}}
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
         <div class="mb-3">
           <button class="btn btn-primary" id="btn-upload">Upload</button>
         </div>
@@ -29,6 +33,9 @@
       <div class="card-body">
         <div class="mb-3">
           <input type="file" name="upload_file2">
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" id="progress-bar2" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
         <div class="mb-3">
           <button class="btn btn-primary" id="btn-upload2">Upload</button>
@@ -129,7 +136,7 @@
 
           // update database
           $.ajax({
-            url: "{{route('doctor.examination.update', $examination->id)}}",
+            url: "{{route('doctor.examination.updateImage', $examination->id)}}",
             type: "POST",
             data: {
               _token: "{{csrf_token()}}",
@@ -141,6 +148,18 @@
               console.log(data);
             }
           });
+        },
+        xhr: function() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.upload.addEventListener("progress", function(evt) {
+            if(evt.lengthComputable) {
+              var percentComplete = evt.loaded / evt.total;
+              percentComplete = parseInt(percentComplete * 100);
+              $('#progress-bar').width(percentComplete + '%');
+              $('#progress-bar').html(percentComplete + '%');
+            }
+          }, false);
+          return xhr;
         },
         error: function(data) {
           console.log(data);
@@ -177,7 +196,7 @@
           $('input[name=upload_file2]').val('');
 
           $.ajax({
-            url: "{{route('doctor.examination.update', $examination->id)}}",
+            url: "{{route('doctor.examination.updateImage', $examination->id)}}",
             type: "POST",
             data: {
               _token: "{{csrf_token()}}",
@@ -189,6 +208,18 @@
               console.log(data);
             }
           });
+        },
+        xhr: function() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.upload.addEventListener("progress", function(evt) {
+            if(evt.lengthComputable) {
+              var percentComplete = evt.loaded / evt.total;
+              percentComplete = parseInt(percentComplete * 100);
+              $('#progress-bar2').width(percentComplete + '%');
+              $('#progress-bar2').html(percentComplete + '%');
+            }
+          }, false);
+          return xhr;
         },
         error: function(data) {
           console.log(data);

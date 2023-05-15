@@ -15,11 +15,11 @@ class DashboardController extends Controller
         $be_examined_room2 = Examination::where('status', 'be examined')->where('room_number', '2')->first();
         $be_examined_room3 = Examination::where('status', 'be examined')->where('room_number', '3')->first();
         $be_examined_room4 = Examination::where('status', 'be examined')->where('room_number', '4')->first();
-
-        $be_examined_room1 = $be_examined_room1 ?? Examination::where('status', 'examined')->where('room_number', '1')->first();
-        $be_examined_room2 = $be_examined_room2 ?? Examination::where('status', 'examined')->where('room_number', '2')->first();
-        $be_examined_room3 = $be_examined_room3 ?? Examination::where('status', 'examined')->where('room_number', '3')->first();
-        $be_examined_room4 = $be_examined_room4 ?? Examination::where('status', 'examined')->where('room_number', '4')->first();
+        // dd($be_examined_room1);
+        $be_examined_room1 = $be_examined_room1 ?? Examination::where('status', 'examined')->where('room_number', '1')->orderBy('created_at', 'desc')->first();
+        $be_examined_room2 = $be_examined_room2 ?? Examination::where('status', 'examined')->where('room_number', '2')->orderBy('created_at', 'desc')->first();
+        $be_examined_room3 = $be_examined_room3 ?? Examination::where('status', 'examined')->where('room_number', '3')->orderBy('created_at', 'desc')->first();
+        $be_examined_room4 = $be_examined_room4 ?? Examination::where('status', 'examined')->where('room_number', '4')->orderBy('created_at', 'desc')->first();
 
         $be_examined_rooms12 = [$be_examined_room1, $be_examined_room2];
         $be_examined_rooms34 = [$be_examined_room3, $be_examined_room4];

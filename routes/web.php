@@ -79,7 +79,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/examination', [DoctorExaminationController::class, 'store'])->name('doctor.examination.store');
         Route::get('/examination/{id}/edit', [DoctorExaminationController::class, 'edit'])->name('doctor.examination.edit');
         Route::get('/examination/{id}/show', [DoctorExaminationController::class, 'show'])->name('doctor.examination.show');
-        Route::put('/examination/{id}', [DoctorExaminationController::class, 'update'])->name('doctor.examination.update');
+        Route::put('/examination/{id}/update', [DoctorExaminationController::class, 'update'])->name('doctor.examination.update');
+        Route::put('/examination/{id}/updateImage', [DoctorExaminationController::class, 'updateImage'])->name('doctor.examination.updateImage');
         Route::delete('/examination/{id}', [DoctorExaminationController::class, 'destroy'])->name('doctor.examination.destroy');
     });
     

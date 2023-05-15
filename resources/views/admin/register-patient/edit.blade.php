@@ -1,13 +1,13 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="mb-3">
-  <h1 class="h3 mb-3"><strong>Register</strong> Patient</h1>
+  <h1 class="h3 mb-3"><strong>Edit</strong> Patient</h1>
 </div>
 <div class="row">
   <div class="col-12 col-lg-12">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title mb-0">Fill this form for register new patient</h5>
+        <h5 class="card-title mb-0">Fill this form for edit patient</h5>
       </div>
       <div class="card-body">
         <form action="{{route('admin.register-patient.update', $patient->id)}}" method="post">

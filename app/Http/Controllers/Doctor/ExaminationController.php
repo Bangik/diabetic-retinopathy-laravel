@@ -32,6 +32,14 @@ class ExaminationController extends Controller
         return redirect()->route('doctor.examination.index');
     }
 
+    public function updateImage(Request $request, $id)
+    {
+        $examination = Examination::findOrFail($id);
+        $examination->update($request->all());
+
+        return $examination;
+    }
+
     public function show($id)
     {
         $examination = Examination::findOrFail($id);
