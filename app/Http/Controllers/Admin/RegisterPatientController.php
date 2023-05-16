@@ -39,7 +39,7 @@ class RegisterPatientController extends Controller
 
         User::create($request->all());
 
-        return redirect()->route('admin.register-patient.index')->with('success', 'Patient registered successfully');
+        return redirect()->route('admin.register-patient.index')->with('success', 'Patient registered successfully. The email is ' . $request->id_number . '@gmail.com and the password is ' . $request->id_number . '.');
     }
 
     public function edit($id)
