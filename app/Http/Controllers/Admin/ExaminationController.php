@@ -49,7 +49,7 @@ class ExaminationController extends Controller
 
         Examination::create($request->all());
 
-        return redirect()->route('admin.examination.index');
+        return redirect()->route('admin.examination.index')->with('success', 'Examination registered successfully.');
     }
 
     public function edit($id)
@@ -69,7 +69,7 @@ class ExaminationController extends Controller
         $examination = Examination::findOrFail($id);
         $examination->update($request->all());
 
-        return redirect()->route('admin.examination.index');
+        return redirect()->route('admin.examination.index')->with('success', 'Examination updated successfully.');
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class ExaminationController extends Controller
         $examination = Examination::findOrFail($id);
         $examination->delete();
 
-        return redirect()->route('admin.examination.index');
+        return redirect()->route('admin.examination.index')->with('success', 'Examination deleted successfully.');
     }
 }

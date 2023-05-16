@@ -81,6 +81,9 @@
                   </div>
               </div>
               <div class="shadow-lg p-5 shadow-showcase text-center ">
+                <div class="progress mb-3">
+                  <div class="progress-bar" role="progressbar" id="progress-bar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                </div>
                 <img src="{{asset('img/dr/0.png')}}" alt="Detection result" class="img-fluid" width="35%" id="img-result">
                 <h3 class="m-0 f-18 text-center shadow-font" id="text-title">Normal Retina</h3>
                 <p class="m-0 f-14 text-center shadow-font" id="text-desc">Keep your healthy life style to prevent diabetes</p>
@@ -152,6 +155,18 @@
             };
 
             sessionStorage.setItem('dr-detection', JSON.stringify(sessionData));
+          },
+          xhr: function() {
+            var xhr = new window.XMLHttpRequest();
+            xhr.upload.addEventListener("progress", function(evt) {
+              if(evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+                percentComplete = parseInt(percentComplete * 100);
+                $('#progress-bar').width(percentComplete + '%');
+                $('#progress-bar').html(percentComplete + '%');
+              }
+            }, false);
+            return xhr;
           },
           error: function(jqXHR, textStatus, errorThrown, data) {
             console.log(textStatus, errorThrown, data);

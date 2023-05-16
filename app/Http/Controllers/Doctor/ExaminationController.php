@@ -29,7 +29,7 @@ class ExaminationController extends Controller
         $request->merge(['status' => 'examined']);
         $examination->update($request->all());
 
-        return redirect()->route('doctor.examination.index');
+        return redirect()->route('doctor.examination.index')->with('success', 'Examination successfully.');
     }
 
     public function updateImage(Request $request, $id)

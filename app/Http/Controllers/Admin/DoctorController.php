@@ -39,7 +39,7 @@ class DoctorController extends Controller
 
         User::create($request->all());
 
-        return redirect()->route('admin.doctor.index')->with('success', 'Patient registered successfully');
+        return redirect()->route('admin.doctor.index')->with('success', 'Patient registered successfully. The email is ' . $request->id_number . '@gmail.com and the password is ' . $request->id_number . '.');
     }
 
     public function edit($id)
