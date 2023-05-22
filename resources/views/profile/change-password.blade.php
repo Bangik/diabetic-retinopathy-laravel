@@ -19,12 +19,12 @@
             @error('current_password')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
-            <label class="form-label">New Password</label>
+            <label class="form-label">New Password</label> <small class="text-danger">*</small>
             <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Your New Password">
             @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
-            <label class="form-label">Confirmation Password</label>
+            <label class="form-label">Confirmation Password</label> <small class="text-danger">*</small>
             <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Your Confirmation Password">
             @error('password_confirmation')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>

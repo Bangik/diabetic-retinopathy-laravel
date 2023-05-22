@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="mb-3">
-  <h1 class="h3 mb-3"><strong>Start</strong> Examination</h1>
+  <h1 class="h3 mb-3"><strong>Start</strong> Examination for patient {{$examination->patient->name}}</h1>
 </div>
 <div class="row">
   <div class="col-12 col-lg-6">
