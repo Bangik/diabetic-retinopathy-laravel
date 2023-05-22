@@ -138,7 +138,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">ID Number</th>
+                <th scope="col">Queue</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
               </tr>
@@ -148,7 +148,7 @@
               <tr>
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$patient->patient->name}}</td>
-                <td>{{$patient->patient->id_number}}</td>
+                <td>{{$patient->queue_number}}</td>
                 <td>{{$patient->status}}</td>
                 <td>
                   @if ($patient->status == 'waiting')
