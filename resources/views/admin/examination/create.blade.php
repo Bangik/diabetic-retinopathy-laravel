@@ -19,7 +19,7 @@
         <form action="{{route('admin.examination.store')}}" method="post">
           @csrf
           <div class="mb-3">
-            <label class="form-label">Search Patient</label>
+            <label class="form-label">Search Patient</label> <small class="text-danger">*</small>
             <select name="patient_id" class="form-select @error('patient_id') is-invalid @enderror js-example-basic-single">
               <option value="">Select Patient</option>
               @foreach ($patients as $patient)
@@ -29,7 +29,7 @@
             @error('patient_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
-            <label class="form-label">Select Doctor or optomethris for patient</label>
+            <label class="form-label">Select Doctor or optomethris for patient</label> <small class="text-danger">*</small>
             <select name="doctor_id" class="form-select @error('doctor_id') is-invalid @enderror js-example-basic-single">
               <option value="">Select Doctor</option>
               @foreach ($doctors as $doctor)
@@ -39,7 +39,7 @@
             @error('doctor_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
-            <label class="form-label">Select Room</label>
+            <label class="form-label">Select Room</label> <small class="text-danger">*</small>
             <select name="room_number" class="form-select @error('room_number') is-invalid @enderror js-example-basic-single">
               <option value="">Select Room</option>
               <option value="1">Room 1</option>
