@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('queue_number');
             $table->string('status');
             $table->string('room_number')->nullable();
-            $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->text('name')->nullable();
+            $table->text('description')->nullable();
             $table->string('result')->nullable();
             $table->string('result2')->nullable();
-            $table->string('action')->nullable();
+            $table->text('action')->nullable();
             $table->string('file')->nullable();
             $table->string('file2')->nullable();
             $table->timestamps();
