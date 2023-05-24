@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class RegisterPatientController extends Controller
@@ -29,9 +30,9 @@ class RegisterPatientController extends Controller
             'age' => 'nullable|string|max:255',
             'gender' => 'nullable|string|max:255',
         ]);
-
+        $email = Str::slug($request->id_number) . '@retinopathy-detection.tech';
         $request->merge([
-            'email' => $request->id_number . '@gmail.com',
+            'email' => $email,
             'role' => 'patient',
             'status' => 'active',
             'password' => app('hash')->make($request->id_number),
@@ -39,7 +40,7 @@ class RegisterPatientController extends Controller
 
         User::create($request->all());
 
-        return redirect()->route('admin.register-patient.index')->with('success', 'Patient registered successfully. The email is ' . $request->id_number . '@gmail.com and the password is ' . $request->id_number . '.');
+        return redirect()->route('admin.register-patient.index')->with('success', 'Patient registered successfully. The email is ' . $email . ' and the password is ' . $request->id_number . '.');
     }
 
     public function edit($id)
