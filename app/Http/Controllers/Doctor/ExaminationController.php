@@ -11,7 +11,8 @@ class ExaminationController extends Controller
 {
     public function index()
     {
-        $examinations = Examination::where('doctor_id', auth()->user()->id)->where('created_at', '>=', now()->subDays(7))->orderBy('created_at', 'desc')->get();
+        $examinations = Examination::where('doctor_id', auth()->user()->id)->where('created_at', '>=', now()->startOfDay())->orderBy('created_at', 'desc')->get();
+        // dd(now()->startOfDay());
         return view('doctor.examination.index', compact('examinations'));
     }
 
