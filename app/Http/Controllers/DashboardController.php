@@ -33,7 +33,7 @@ class DashboardController extends Controller
         }
         
         $patients = $patients ?? [];
-        $last_queue = $last_queue ?? Examination::where('status', 'examined')->orderBy('created_at', 'desc')->first();
+        $last_queue = $last_queue ?? [];
         // dd($be_examined_rooms12);
         return view('dashboard', compact('patients', 'last_queue', 'be_examined_rooms12', 'be_examined_rooms34'));
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -29,9 +30,9 @@ class DoctorController extends Controller
             'age' => 'nullable|string|max:255',
             'gender' => 'nullable|string|max:255',
         ]);
-
+        $email = Str::slug($request->id_number) . '@retinopathy-detection.tech';
         $request->merge([
-            'email' => $request->id_number . '@gmail.com',
+            'email' => $email,
             'role' => 'doctor',
             'status' => 'active',
             'password' => app('hash')->make($request->id_number),
@@ -39,7 +40,7 @@ class DoctorController extends Controller
 
         User::create($request->all());
 
-        return redirect()->route('admin.doctor.index')->with('success', 'Patient registered successfully. The email is ' . $request->id_number . '@gmail.com and the password is ' . $request->id_number . '.');
+        return redirect()->route('admin.doctor.index')->with('success', 'Doctor registered successfully. The email is ' . $email . ' and the password is ' . $request->id_number . '.');
     }
 
     public function edit($id)
@@ -63,12 +64,12 @@ class DoctorController extends Controller
 
         User::where('id', $id)->update($request->except('_token', '_method'));
 
-        return redirect()->route('admin.doctor.index')->with('success', 'Patient updated successfully');
+        return redirect()->route('admin.doctor.index')->with('success', 'Doctor updated successfully');
     }
 
     public function destroy($id)
     {
         User::where('id', $id)->delete();
-        return redirect()->route('admin.doctor.index')->with('success', 'Patient deleted successfully');
+        return redirect()->route('admin.doctor.index')->with('success', 'Doctor deleted successfully');
     }
 }
