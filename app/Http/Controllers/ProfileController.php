@@ -16,6 +16,11 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'id_number' => 'required|string|max:255|unique:users,id_number,' . auth()->user()->id,
+            'email' => 'required|string|email|max:255|unique:users,email,' . auth()->user()->id,
+        ]);
         $user = User::find(auth()->user()->id);
         $user->update($request->all());
         return redirect()->route('profile.index')->with('success', 'Profile updated successfully');
