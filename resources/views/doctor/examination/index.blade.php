@@ -43,7 +43,8 @@
                     <a href="{{route('doctor.examination.edit', $examination->id)}}" class="btn btn-sm btn-primary">Start Examination</a>
                   @elseif ($examination->status == 'be examined')
                     <a href="{{route('doctor.examination.edit', $examination->id)}}" class="btn btn-sm btn-primary">Continue Examination</a>
-                  @elseif ($examination->status == 'examined')
+                    @elseif ($examination->status == 'examined')
+                    <a href="{{route('doctor.examination.edit', $examination->id)}}" class="btn btn-sm btn-primary">Edit Examination</a>
                     <a href="{{route('doctor.examination.show', $examination->id)}}" class="btn btn-sm btn-primary">Show Result</a>
                   @endif
                 </td>

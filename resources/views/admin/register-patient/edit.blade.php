@@ -24,7 +24,7 @@
             @error('id_number')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>
           <div class="mb-3">
-            <label class="form-label">Email</label>
+            <label class="form-label">Email</label> <small class="text-danger">*</small>
             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Patient email" value="{{ $patient->email }}">
             @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
           </div>

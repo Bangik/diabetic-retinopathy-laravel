@@ -54,7 +54,7 @@ class RegisterPatientController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'id_number' => 'required|string|max:255|unique:users,id_number,' . $id,
-            'email' => 'nullable|string|email|max:255|unique:users,email,' . $id,
+            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
             'phone_number' => 'nullable|string|max:255',
             'address' => 'nullable|string|max:255',
             'age' => 'nullable|string|max:255',
