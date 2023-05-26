@@ -24,7 +24,7 @@ class RegisterPatientController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'id_number' => 'required|string|max:255',
+            'id_number' => 'required|string|max:255|unique:users',
             'phone_number' => 'nullable|string|max:255',
             'address' => 'nullable|string|max:255',
             'age' => 'nullable|string|max:255',
