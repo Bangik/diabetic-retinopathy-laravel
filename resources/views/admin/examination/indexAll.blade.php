@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 @section('content')
 <div class="mb-3">
-  <h1 class="h3 mb-3"><strong>List</strong> Examination Queue Today</h1>
+  <h1 class="h3 mb-3"><strong>List</strong> Examination Queue All</h1>
 </div>
 <div class="row">
   <div class="col-12 col-lg-12">
@@ -15,7 +15,7 @@
     @endif
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title mb-0">List of examination queue today</h5>
+        <h5 class="card-title mb-0">List of examination queue All</h5>
       </div>
       <div class="card-body">
         <div class="table-responsive">
